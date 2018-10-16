@@ -1,0 +1,42 @@
+package com.linli.consumer.bean;
+
+/**
+ * Created by hasee on 2016/12/16.
+ */
+
+public class RongToken {
+
+    /**
+     * code : 200
+     * userId : 1
+     * token : aaa
+     */
+
+    private int code;
+    private String userId;
+    private String token;
+
+    public int getCode() {
+        return code;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+}

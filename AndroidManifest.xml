@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.linli.consumer">
+
+    <permission
+        android:name="${applicationId}.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="${applicationId}.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application
+        android:name=".app.AppContext"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon,android:allowBackup,android:label">
+        <!-- 盒子sdk -->
+        <service
+            android:name="com.easimote.sdk.service.BeaconService"
+            android:exported="false" />
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </activity>
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />
+                <!-- Required 显示通知栏 -->
+                <category android:name="${applicationId}" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" />
+        <!-- 自定义Receiver -->
+        <receiver
+            android:name=".utils.MyReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <!-- Required 用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!-- Required 用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!-- Required 用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!-- Required 用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" />
+                <!-- Optional 用户接受Rich Push Javascript 回调函数的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="${applicationId}" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="38d8f3720d52a3be44930655" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="GDuA0hc6DtMrBfH4iNm4kQ6o50xiu4fs" />
+
+        <activity android:name=".ui.cookbook.OrderHealthWayViewActivity" />
+        <activity android:name=".ui.cookbook.OrderHealthWayDetailsActivity" />
+        <activity
+            android:name=".ui.main.LoginYZXActivity"
+            android:label="@string/title_activity_login_yzh" />
+        <activity
+            android:name=".ui.main.RegisterYZXActivity"
+            android:label="@string/title_activity_register_yzx"
+            android:theme="@style/activityRight2Left" />
+        <activity
+            android:name=".ui.main.PersonalCenterActivity"
+            android:label="@string/title_activity_personal_center" />
+        <activity
+            android:name=".ui.main.MessageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.hd.hdappyzx"
+                    android:pathPrefix="/conversationlist"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.main.SearchActivity"
+            android:label="@string/title_activity_search"
+            android:windowSoftInputMode="stateVisible|adjustResize" />
+        <activity
+            android:name=".ui.main.ScanningBuyActivity"
+            android:label="@string/title_activity_scanning_buy" />
+        <activity
+            android:name=".ui.main.CollectionsActivity"
+            android:label="@string/title_activity_collection" />
+        <activity
+            android:name=".ui.main.OrdersActivity"
+            android:label="@string/title_activity_orders" />
+        <activity
+            android:name=".ui.main.EWalletActivity"
+            android:label="@string/title_activity_ewallet" />
+        <activity
+            android:name=".ui.main.BusinessInfoActivity"
+            android:label="@string/title_activity_business_info" />
+        <activity
+            android:name=".ui.main.SettingActivity"
+            android:label="@string/title_activity_setting" />
+        <activity
+            android:name=".ui.main.JoinUsActivity"
+            android:label="@string/title_activity_join_us"
+            android:theme="@style/activityRight2Left" />
+        <activity
+            android:name=".ui.main.HelpActivity"
+            android:label="@string/title_activity_help"
+            android:theme="@style/activityRight2Left" />
+        <activity
+            android:name=".ui.main.PersonalDataActivity"
+            android:label="@string/title_activity_personal_data" />
+        <activity
+            android:name=".ui.main.LevelsUserActivity"
+            android:label="@string/title_activity_levels_user"
+            android:theme="@style/activityRight2Left" />
+        <activity
+            android:name=".ui.main.UploadWayActivity"
+            android:label="@string/title_activity_upload_way"
+            android:theme="@style/diallogStyleBottom" />
+        <activity
+            android:name=".ui.main.UpdateUserDatasActivity"
+            android:label="@string/title_activity_update_nick_name"
+            android:theme="@style/diallogStyleBottom" />
+        <activity
+            android:name=".ui.main.UpdateSexActivity"
+            android:label="@string/title_activity_update_sex"
+            android:theme="@style/diallogStyleBottom" />
+        <activity
+            android:name=".ui.main.SuggestionActivity"
+            android:label="@string/title_activity_suggestion"
+            android:theme="@style/activityRight2Left" />
+        <activity
+            android:name=".ui.main.BusinessInfoDetailActivity"
+            android:label="@string/title_activity_business_info_detail"
+            android:theme="@style/activityRight2Left" />
+        <activity
+            android:name=".ui.main.AddressManageActivity"
+            android:label="@string/title_activity_address_manage" />
+        <activity
+            android:name=".ui.main.AboutUsActivity"
+            android:label="@string/title_activity_about_us"
+            android:theme="@style/activityRight2Left" />
+        <activity
+            android:name=".ui.main.CheckVersionActivity"
+            android:label="@string/title_activity_check_version"
+            android:theme="@style/diallogStyleBottom" />
+        <activity
+            android:name=".ui.main.SHTMenuActivity"
+            android:label="@string/title_activity_shtmenu"
+            android:theme="@style/diallogStyleBottom" />
+        <activity
+            android:name=".ui.main.SearchResultsActivity"
+            android:label="@string/title_activity_search_results"
+            android:theme="@style/activityRight2Left" />
+        <activity
+            android:name=".ui.main.FeedbackDetailActivity"
+            android:label="@string/title_activity_feedback_detail" />
+        <activity
+            android:name=".ui.main.ResetPasswordActivity"
+            android:label="@string/title_activity_reset_password"
+            android:theme="@style/activityRight2Left" />
+        <activity
+            android:name=".ui.main.NewOrUpdateAddressActivity"
+            android:label="@string/title_activity_new_or_update_address" />
+        <activity
+            android:name=".ui.main.FindOutActivity"
+            android:label="@string/title_activity_find_out" />
+        <activity
+            android:name=".ui.services.SubmitOrderServicesActivity"
+            android:label="@string/title_activity_submit_order_services"
+            android:theme="@style/activityRight2Left" />
+        <activity
+            android:name=".ui.main.ShopTypeChooseActovity"
+            android:label="@string/title_activity_shop_type_choose_actovity"
+            android:theme="@style/diallogStyleBottom" />
+        <activity
+            android:name=".ui.main.PaiYiPaiActivity"
+            android:label="@string/title_activity_pai_yi_pai" />
+        <activity
+            android:name=".ui.main.PaiYiPaiTypeActivity"
+            android:label="@string/title_activity_setting_pai_yi_pai" />
+        <activity
+            android:name=".ui.main.SettingPaiYiPaiActivity"
+            android:label="@string/title_activity_setting_pai_yi_pai" />
+        <activity
+            android:name=".ui.main.PaiYiPaiIntroduceActivity"
+            android:label="@string/title_activity_pai_yi_pai_introduce" />
+        <activity
+            android:name=".ui.main.PaiYiPaiProductActivity"
+            android:label="@string/title_activity_pai_yi_pai_product"
+            android:theme="@style/diallogStyleBottom" />
+        <activity
+            android:name=".ui.main.PaiYiPaiAnnouncementActivity"
+            android:label="@string/title_activity_pai_yi_pai_announcement"
+            android:theme="@style/diallogStyleBottom" />
+        <activity
+            android:name=".ui.main.PaiYiPaiAdvertisementActivity"
+            android:label="@string/title_activity_pai_yi_pai_advertisement"
+            android:theme="@style/diallogStyleBottom" />
+        <activity
+            android:name=".ui.main.ChatActivity"
+            android:label="@string/title_activity_chat" />
+        <activity
+            android:name=".ui.main.ConversationActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="com.hd.hdappyzx"
+                    android:pathPrefix="/conversation/"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".utils.RongNotifivationReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="io.rong.push.intent.MESSAGE_ARRIVED" />
+                <action android:name="io.rong.push.intent.MI_MESSAGE_ARRIVED" />
+                <action android:name="io.rong.push.intent.MESSAGE_CLICKED" />
+                <action android:name="io.rong.push.intent.MI_MESSAGE_CLICKED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".ui.main.OnlinePayMethodActivity"
+            android:label="@string/title_activity_online_pay_method"
+            android:theme="@style/diallogStyleBottom" />
+        <!-- 关于支付宝的界面 start -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <!-- end -->
+        <!-- 关于微信支付的界面 start -->
+        <activity
+            android:name="com.swwx.paymax.PaymentActivity"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <activity-alias
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:targetActivity="com.swwx.paymax.PaymentActivity" />
+        <!-- 恢复为字节接入微信支付 下面receiver要放开，并且左侧项目的WXPayEntryAcitivity界面要取消注释 -->
+        <!-- <receiver android:name=".wxapi.AppRegister"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <!-- end -->
+        <!-- 注册拉卡拉 -->
+        <activity
+            android:name="com.lkl.pay.ui.activity.SDK_StartJarActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.lkl.pay.ui.activity.SDK_LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lkl.pay.ui.activity.SDK_MsgLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lkl.pay.ui.activity.cardPay.BindCreditCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lkl.pay.ui.activity.cardPay.BindDebitCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lkl.pay.ui.activity.cardPay.HtmlProtocolActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lkl.pay.ui.activity.cardPay.InputCardNoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lkl.pay.ui.activity.cardPay.InputMessageCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lkl.pay.ui.activity.forget.FindLoginPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lkl.pay.ui.activity.forget.SetLoginPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lkl.pay.ui.activity.register.SetPayPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lkl.pay.ui.activity.payResult.SuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lkl.pay.ui.activity.payResult.FailureActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="cn.cloudcore.iprotect.plugin.CKbdActivity"
+            android:configChanges="orientation"
+            android:launchMode="singleTask"
+            android:theme="@android:style/Theme.Translucent" />
+        <!-- end -->
+        <activity
+            android:name=".ui.main.PaiYiPaiFoodsActivity"
+            android:label="@string/title_activity_pai_yi_pai_foods"
+            android:theme="@style/diallogStyleBottom" />
+        <activity
+            android:name=".ui.main.PaiYiPaiServiceActivity"
+            android:label="@string/title_activity_pai_yi_pai_service"
+            android:theme="@style/diallogStyleBottom" />
+        <activity
+            android:name=".ui.main.PaiYiPaiAdvertisementPicActivity"
+            android:label="@string/title_activity_pai_yi_pai_advertisement_pic"
+            android:theme="@style/diallogStyleBottom" />
+        <activity
+            android:name=".ui.main.PaiYiPaiAdvertisementTextActivity"
+            android:label="@string/title_activity_pai_yi_pai_advertisement_text"
+            android:theme="@style/diallogStyleBottom" />
+        <activity
+            android:name=".ui.main.PaiYiPaiAdvertisementOtherActivity"
+            android:label="@string/title_activity_pai_yi_pai_advertisement_other"
+            android:theme="@style/diallogStyleBottom" />
+        <activity
+            android:name=".ui.main.PaiYiPaiNearbyShopsActivity"
+            android:label="@string/title_activity_pai_yi_pai_nearby_shops"
+            android:theme="@style/diallogStyleBottom" />
+        <activity
+            android:name=".ui.main.ComplaintActivity"
+            android:label="@string/title_activity_complaint"
+            android:theme="@style/diallogStyleBottom" />
+        <activity
+            android:name=".ui.main.MyConcernedListActivity"
+            android:label="@string/title_activity_my_concerned_list" />
+        <activity
+            android:name=".ui.main.PaySuccessActivity"
+            android:label="@string/title_activity_pay_success" />
+        <activity
+            android:name=".ui.main.NoInternetIfPaiPaiActivity"
+            android:label="@string/title_activity_no_internet_if_pai_pai"
+            android:theme="@style/diallogStyleBottom" />
+        <activity
+            android:name=".ui.main.OrderDetailActivity"
+            android:label="@string/title_activity_order_detail" />
+        <activity
+            android:name=".ui.main.MoneyOutActivity"
+            android:label="@string/title_activity_money_out" />
+        <activity
+            android:name=".ui.main.DialogInputPasswordActivity"
+            android:label="@string/title_activity_dialog_input_password"
+            android:theme="@style/diallogStyleBottom" />
+        <activity
+            android:name=".ui.main.EWMoneySuccessActivity"
+            android:label="@string/title_activity_money_out_success" />
+        <activity
+            android:name=".ui.main.MoneyInActivity"
+            android:label="@string/title_activity_money_in" />
+        <activity
+            android:name=".ui.main.EWDialogInMoneyPayPassActivity"
+            android:label="@string/title_activity_dialog_in_money_pay_pass"
+            android:theme="@style/diallogStyleBottom" />
+        <activity
+            android:name=".ui.main.EWChangeBankCardActivity"
+            android:label="@string/title_activity_ewchange_bank_card"
+            android:theme="@style/diallogStyleBottom" />
+        <activity
+            android:name=".ui.main.EWAddBankCardActivity"
+            android:label="@string/title_activity_ewadd_bank_card" />
+        <activity
+            android:name=".ui.main.EWSettingPayPwdActivity"
+            android:label="@string/title_activity_rwsetting_pay_pwd" />
+        <activity
+            android:name=".ui.main.EWInputPayPwdActivity"
+            android:label="@string/title_activity_ewinput_pay_pwd"
+            android:theme="@style/diallogStyleBottom" />
+        <activity
+            android:name=".ui.main.EWSettingActivity"
+            android:label="@string/title_activity_ewsetting" />
+        <activity
+            android:name=".ui.main.EWUpdatePayPasswordActivity"
+            android:label="@string/title_activity_ewupdate_pay_password" />
+        <activity
+            android:name=".ui.main.YaoYiYaoActivity"
+            android:label="@string/title_activity_yao_yi_yao" />
+        <activity
+            android:name=".ui.main.WelcomeActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.main.CropPhotoActivity"
+            android:label="@string/title_activity_crop_photo" />
+        <activity
+            android:name=".ui.main.CropHeadPicActivity"
+            android:label="@string/title_activity_crop_head_pic" />
+        <activity
+            android:name=".ui.main.ChangeAreaActivity"
+            android:label="@string/title_activity_change_area" />
+        <activity
+            android:name=".ui.shop_v2.ShopActivity"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".ui.shop_v2.ShopDirectActivity"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".ui.shop_v2.ShopSortActivity"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".ui.shop_v2.ShopDetailActivity"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".ui.directbusiness.ShopDetailDirectActivity"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".ui.shop_v2.GoodsDetailActivity"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".ui.main.ZoomableImageActivity"
+            android:theme="@style/diallogStyleCenter" />
+        <activity android:name=".ui.main.PersonalDataChooseActivity" />
+        <activity android:name=".ui.main.AccountSafeActivity" />
+        <activity
+            android:name=".ui.main.DatePickerActivity"
+            android:theme="@style/diallogStyleBottom" />
+        <activity
+            android:name=".ui.shop_v2.ShopListDetailActivity"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".ui.shop_v2.FoodDetailActivity"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".ui.shop_v2.ShopFoodOrderActivity"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity
+            android:name=".ui.shop_v2.ShopDetailSelfActivity"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <activity android:name=".ui.shop_v2.shopdetail.GoodsDetailActivity" />
+        <activity android:name=".ui.shop_v2.ShopCartActivity" />
+        <activity android:name=".ui.main.UpdatePhoneActivity" />
+        <activity android:name=".ui.main.UpdatePhoneByPhoneActivity" />
+        <activity android:name=".ui.main.UpdatePhoneByEmailActivity" />
+        <activity android:name=".ui.main.UpdatePhoneFinalActivity" />
+        <activity android:name=".ui.main.UpdatePasswordActivity" />
+        <activity android:name=".ui.main.V2VoicePhotoBuyActivity" />
+        <activity android:name=".ui.main.V2SelectCityActivity" />
+        <activity android:name=".ui.shop_v2.ShakeActivity" />
+        <activity android:name=".ui.shop_v2.ShopMoreActivity" />
+        <activity android:name=".ui.main.EWResetPayPasswordActivity" />
+        <activity android:name=".ui.main.MyCouponActivity" />
+        <activity
+            android:name=".ui.main.AddFastTextActivity"
+            android:theme="@style/diallogStyleBottom" />
+        <activity android:name=".ui.main.YZXIndexActivity" />
+        <activity
+            android:name=".ui.main.SpringboardActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name=".ui.main.BoundEmailActivity" />
+        <activity android:name=".ui.main.ReceiveAddPriseActivity" />
+        <activity android:name=".ui.main.YaoOrdersToPayActivity" />
+        <activity android:name=".ui.main.AgreementActivity" />
+        <activity
+            android:name=".ui.shop_v2.WidgetActivity"
+            android:theme="@style/moreWidgetDuration" />
+        <activity android:name=".ui.main.MapLocationActivity" />
+        <activity android:name=".ui.shop_v2.FoodRecipeActivity" />
+        <activity android:name=".ui.shop_v2.FoodRecipeSearchActivity" />
+        <activity android:name=".ui.main.FujidanActivity" />
+        <activity android:name=".ui.main.BankCardAddActivity" />
+        <activity android:name=".ui.main.BankcardpoiActivity" />
+        <activity android:name=".ui.main.BankCardActivity" />
+        <activity android:name=".ui.main.EWBankdetailActivity" />
+        <activity
+            android:name=".ui.main.ShowQRCodeAcitivity"
+            android:theme="@style/diallogStyleCenter" />
+        <activity android:name=".ui.main.AllMyEggsActivity" />
+        <activity android:name=".ui.guide.GuideActivity" />
+        <activity android:name=".ui.shop_v2.ImageActivity" />
+        <activity
+            android:name=".ui.main.FeedBackDetailRightDialog"
+            android:theme="@style/DialogTransluteTopToBottom" />
+        <activity android:name=".ui.main.BusinessInfoMemberActivity" />
+        <activity
+            android:name=".ui.main.PaiYiPaiAdDialogActivity"
+            android:theme="@style/widget_mc_dialog" />
+        <activity
+            android:name=".ui.main.PaiYiPaiCartActivity"
+            android:theme="@style/activityRight2LeftNoBg" />
+        <activity android:name=".ui.services.ServiceGoodDetailActivity" />
+        <activity
+            android:name=".ui.main.BluetoothConnWifiActivity"
+            android:theme="@style/diallogStyleBottom" />
+        <activity
+            android:name=".ui.main.ConnectToSellerActivity"
+            android:theme="@style/diallogStyleBottom" />
+        <activity
+            android:name=".ui.shop_v2.CashCouponActivity"
+            android:theme="@style/diallogStyleBottom" />
+        <activity android:name=".ui.shop_v2.CashCouponRedBagActivity" />
+        <activity android:name=".ui.shop_v2.MyCouponRedBagActivity" />
+        <activity android:name=".ui.directbusiness.ShopDetailDirectV2Activity" />
+        <activity android:name=".ui.directbusiness.ShopCartDirectActivity" />
+        <activity
+            android:name=".ui.directbusiness.RedBagDialogActivity"
+            android:theme="@style/diallogStyleCenter" />
+        <activity android:name=".ui.main.BrowserAdverActivity" />
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name=".ui.main.WeChatShareActivity"
+            android:theme="@style/diallogStyleGeneral" />
+        <activity
+            android:name=".ui.main.SongXiaobaoDownloadActivity"
+            android:theme="@style/diallogStyleBottom" />
+        <activity android:name=".ui.takecar.TakeCarIndexActivity" />
+        <activity android:name=".ui.takecar.ListTakeCarNeedActivity" />
+        <activity android:name=".ui.takecar.TakeCarWaitDriverAcceptActivity" />
+        <activity android:name=".ui.takecar.EvaluateDriverActivity" />
+        <activity android:name=".ui.takecar.TakeCarVoiceNeedActivity" />
+        <activity
+            android:name=".ui.main.ReturnMoneyActivity"
+            android:theme="@style/diallogStyleCenter" />
+        <activity android:name=".ui.load_h5.ParentH5Activity" />
+        <!-- <activity android:name="com.linli.consumer.ui.load_h5.ParentH5NewActivity" /> -->
+        <activity android:name=".ui.shop_v2.ShopSortV2Activity" />
+        <activity android:name=".ui.shop_v2.ShopDirectSearchActivity" />
+        <activity android:name=".ui.shop_v2.GoodsMoreV2Activity" />
+        <activity android:name=".ui.cybercafe.MainCafeActivity" />
+        <activity android:name=".ui.main.WeChatBindPhoneActivity"></activity>
+    </application>
+
+</manifest>

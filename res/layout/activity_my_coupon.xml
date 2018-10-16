@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_my_coupon"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_gray"
+    tools:context="com.linli.consumer.ui.main.MyCouponActivity">
+    <include
+        layout="@layout/normal_top_header" />
+    <ListView
+        android:layout_marginTop="20dp"
+        android:id="@+id/lv_coupons"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:cacheColorHint="#00000000"
+        android:listSelector="#00000000"
+        android:dividerHeight="20dp"
+        android:divider="@color/light_gray">
+    </ListView>
+    <TextView
+        android:id="@+id/tv_nodata"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="还没有可用优惠券哦~"
+        android:textColor="@color/notselect_text"/>
+</LinearLayout>

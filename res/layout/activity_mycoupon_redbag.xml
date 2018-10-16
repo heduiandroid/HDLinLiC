@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_head"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        >
+        <com.linli.consumer.widget.BackLayoutNormal
+            android:id="@+id/shop_sort_main_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </android.support.v7.widget.Toolbar>
+
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/main_content"
+    android:layout_below="@id/tb_head"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:background="@color/light_gray"
+        android:id="@+id/shop_sort_main_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/reader_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+
+        <android.support.design.widget.TabLayout
+            android:background="@color/white"
+            app:tabMode="fixed"
+            app:tabTextAppearance="@style/CustomTabLayoutTextAppearance"
+            android:id="@+id/shop_sort_main_tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabIndicatorColor="@color/lightred"
+            app:tabSelectedTextColor="@color/lightred"
+            app:tabTextColor="@color/gray"
+            android:visibility="gone"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
+</RelativeLayout>

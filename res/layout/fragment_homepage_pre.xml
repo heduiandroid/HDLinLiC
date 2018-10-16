@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        layout="@layout/normal_top_header_titlecenter" />
+    <com.linli.consumer.myview.MyNestedScrollView
+        android:background="@color/white"
+        android:descendantFocusability="blocksDescendants"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <cn.bingoogolapple.bgabanner.BGABanner
+                android:id="@+id/shop_main_banner"
+                style="@style/BannerDirectStyle"
+                app:banner_indicatorGravity="bottom|center_horizontal"
+                app:banner_transitionEffect="defaultEffect" />
+            <TextView
+                android:id="@+id/tv_tosanning"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="1000dp"
+                android:text="扫码首页"/>
+        </LinearLayout>
+
+    </com.linli.consumer.myview.MyNestedScrollView>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/order_iv_address_choice_checkbox_checked" android:state_checked="true"></item>
+    <item android:drawable="@drawable/order_iv_address_choice_checkboxblank" android:state_checked="false"></item>
+    <item android:drawable="@drawable/order_iv_address_choice_checkbox_checked"></item>
+</selector>

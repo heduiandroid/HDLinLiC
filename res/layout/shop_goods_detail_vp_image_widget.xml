@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="100dp"
+    android:layout_height="125dp"
+    android:gravity="center">
+    <com.facebook.drawee.view.SimpleDraweeView
+        fresco:progressBarImage="@drawable/pic_yi_progress"
+        fresco:progressBarImageScaleType="centerInside"
+        fresco:progressBarAutoRotateInterval="5000"
+        fresco:failureImage="@drawable/pic_yi_failure"
+        fresco:failureImageScaleType="centerInside"
+        fresco:retryImage="@drawable/pic_yi_retry"
+        fresco:retryImageScaleType="centerInside"
+        fresco:placeholderImage="@drawable/pic_yi_place"
+
+        android:id="@+id/shop_goods_detail_vp_image_im"
+        android:layout_width="100dp"
+        android:layout_height="125dp" />
+
+</LinearLayout>

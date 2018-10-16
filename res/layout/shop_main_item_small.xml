@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_marginTop="9dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.facebook.drawee.view.SimpleDraweeView
+                fresco:roundedCornerRadius="1dp"
+                fresco:roundTopLeft="true"
+                fresco:roundTopRight="true"
+                fresco:roundBottomLeft="true"
+                fresco:roundBottomRight="true"
+                fresco:roundingBorderWidth="1dp"
+                fresco:roundingBorderColor="@color/gray_fooddetails_bag"
+
+                android:layout_gravity="center"
+                fresco:progressBarImage="@drawable/pic_yi_progress"
+                fresco:progressBarImageScaleType="centerInside"
+                fresco:progressBarAutoRotateInterval="5000"
+                fresco:failureImage="@mipmap/default_background"
+                fresco:failureImageScaleType="centerInside"
+                fresco:retryImage="@mipmap/default_background"
+                fresco:retryImageScaleType="centerInside"
+                fresco:placeholderImage="@mipmap/default_background"
+                android:id="@+id/shop_main_item_small_im1"
+                android:layout_width="62dp"
+                android:layout_height="62dp" />
+            <TextView
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:textColor="@color/color_shop_sort_coupon_text"
+                android:textSize="12sp"
+                android:text="￥--"
+                android:id="@+id/shop_main_item_small_tv1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.facebook.drawee.view.SimpleDraweeView
+                fresco:roundedCornerRadius="1dp"
+                fresco:roundTopLeft="true"
+                fresco:roundTopRight="true"
+                fresco:roundBottomLeft="true"
+                fresco:roundBottomRight="true"
+                fresco:roundingBorderWidth="1dp"
+                fresco:roundingBorderColor="@color/gray_fooddetails_bag"
+
+
+                android:id="@+id/shop_main_item_small_im2"
+                android:layout_gravity="center"
+                fresco:progressBarImage="@drawable/pic_yi_progress"
+                fresco:progressBarImageScaleType="centerInside"
+                fresco:progressBarAutoRotateInterval="5000"
+                fresco:failureImage="@mipmap/default_background"
+                fresco:failureImageScaleType="centerInside"
+                fresco:retryImage="@mipmap/default_background"
+                fresco:retryImageScaleType="centerInside"
+                fresco:placeholderImage="@mipmap/default_background"
+                android:layout_width="62dp"
+                android:layout_height="62dp" />
+            <TextView
+                android:id="@+id/shop_main_item_small_tv2"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:textColor="@color/color_shop_sort_coupon_text"
+                android:textSize="12sp"
+                android:text="￥--"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.facebook.drawee.view.SimpleDraweeView
+                fresco:roundedCornerRadius="1dp"
+                fresco:roundTopLeft="true"
+                fresco:roundTopRight="true"
+                fresco:roundBottomLeft="true"
+                fresco:roundBottomRight="true"
+                fresco:roundingBorderWidth="1dp"
+                fresco:roundingBorderColor="@color/gray_fooddetails_bag"
+
+
+                android:id="@+id/shop_main_item_small_im3"
+                android:layout_gravity="center"
+                fresco:progressBarImage="@drawable/pic_yi_progress"
+                fresco:progressBarImageScaleType="centerInside"
+                fresco:progressBarAutoRotateInterval="5000"
+                fresco:failureImage="@mipmap/default_background"
+                fresco:failureImageScaleType="centerInside"
+                fresco:retryImage="@mipmap/default_background"
+                fresco:retryImageScaleType="centerInside"
+                fresco:placeholderImage="@mipmap/default_background"
+                android:layout_width="62dp"
+                android:layout_height="62dp" />
+            <TextView
+                android:id="@+id/shop_main_item_small_tv3"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:textColor="@color/color_shop_sort_coupon_text"
+                android:textSize="12sp"
+                android:text="￥--"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.facebook.drawee.view.SimpleDraweeView
+                fresco:roundedCornerRadius="1dp"
+                fresco:roundTopLeft="true"
+                fresco:roundTopRight="true"
+                fresco:roundBottomLeft="true"
+                fresco:roundBottomRight="true"
+                fresco:roundingBorderWidth="1dp"
+                fresco:roundingBorderColor="@color/gray_fooddetails_bag"
+
+
+                android:id="@+id/shop_main_item_small_im4"
+                android:layout_gravity="center"
+                fresco:progressBarImage="@drawable/pic_yi_progress"
+                fresco:progressBarImageScaleType="centerInside"
+                fresco:progressBarAutoRotateInterval="5000"
+                fresco:failureImage="@mipmap/default_background"
+                fresco:failureImageScaleType="centerInside"
+                fresco:retryImage="@mipmap/default_background"
+                fresco:retryImageScaleType="centerInside"
+                fresco:placeholderImage="@mipmap/default_background"
+                android:layout_width="62dp"
+                android:layout_height="62dp" />
+            <TextView
+                android:id="@+id/shop_main_item_small_tv4"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:textColor="@color/color_shop_sort_coupon_text"
+                android:textSize="12sp"
+                android:text="￥--"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

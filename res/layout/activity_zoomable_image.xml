@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_zoomable_image"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:gravity="center"
+    tools:context="com.linli.consumer.ui.main.ZoomableImageActivity">
+    <com.linli.consumer.widget.ZoomableDraweeView
+        android:id="@+id/zdv_image"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="0.8"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        fresco:fadeDuration="300"
+        fresco:actualImageScaleType="centerCrop"
+        fresco:placeholderImage="@mipmap/default_background"
+        fresco:placeholderImageScaleType="centerCrop"
+        fresco:failureImage="@mipmap/default_background"
+        fresco:failureImageScaleType="centerCrop"
+        fresco:roundedCornerRadius="5dp"/>
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_qr_dialog_close"/>
+</LinearLayout>

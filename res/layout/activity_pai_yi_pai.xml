@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.linli.consumer.ui.main.PaiYiPaiActivity">
+    <include
+        android:id="@id/header"
+        layout="@layout/paiyipai_top_header" />
+    <ImageView
+        android:id="@+id/iv_bg_paiyipai"
+        android:layout_below="@id/header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/bg_paiyipai"
+        android:scaleType="centerCrop"/>
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdv_gifpaiyipai"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/gifpaiyipai"/>
+
+        <TextView
+            android:padding="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="拍一拍打开更多惊喜"
+            android:textColor="@color/orange"
+            android:textSize="16dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_shop_info"
+        android:layout_below="@id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+        <include
+            layout="@layout/paiyipai_top_shopinfo"/>
+    </LinearLayout>
+
+</RelativeLayout>

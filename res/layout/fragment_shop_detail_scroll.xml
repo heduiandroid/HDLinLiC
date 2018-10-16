@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="320dp">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/fragment_shop_detail_vp"
+            android:layout_width="match_parent"
+            android:layout_height="320dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <RelativeLayout
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_centerInParent="true"
+                android:background="@mipmap/ic_shop_detail_num_vp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="8dp"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:id="@+id/fragment_shop_detail_imagenums_tv"
+                android:gravity="center"
+                android:text="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="11dp"
+        android:layout_marginTop="11dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/fragment_shop_detail_name_tv"
+            android:textColor="@color/gray"
+            android:textSize="15sp"
+            android:text="--"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/fragment_shop_detail_tag"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/orange"
+            android:textSize="12sp"
+            android:text="*购买此商品,返店铺现金抵用券。"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+        <RelativeLayout
+            android:id="@+id/ll"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textSize="14sp"
+                android:id="@+id/fragment_shop_detail_price_tv"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/color_shop_detail_price"
+                android:text="￥---"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:id="@+id/fragment_shop_detail_collection_ll"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/fragment_shop_detail_collection_im"
+                    android:background="@mipmap/ic_shop_detail_collection_nor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="12sp"
+                    android:layout_marginTop="10dp"
+                    android:text="加入收藏"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/fragment_shop_detail_choose_rl"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_gray">
+        <ImageView
+            android:id="@+id/tocart"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:background="@mipmap/ic_shop_detail_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:id="@+id/fragment_shop_detail_choose_ll"
+            android:layout_toLeftOf="@id/tocart"
+            android:paddingRight="50dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/fragment_shop_detail_spec_is_tv"
+                android:textSize="14dp"
+                android:textColor="@color/gray"
+                android:text="已选"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/fragment_shop_detail_spec_name_tv"
+                android:layout_weight="1"
+                android:textSize="10dp"
+                android:paddingBottom="5dp"
+                android:textColor="@color/black"
+                android:layout_marginLeft="8dp"
+                android:text="颜色/规格"
+                android:maxLines="10"
+                android:singleLine="false"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="12dp"
+                android:id="@+id/fragment_shop_detail_num_tv"
+                android:textSize="13dp"
+                android:textColor="@color/gray"
+                android:text="--件"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="#fafafa"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1px"
+            android:layout_weight="1"
+            android:background="@color/white" />
+
+        <TextView
+            android:layout_marginBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="继续拖动，查看图文详情"
+            android:textColor="#777"
+            android:textSize="13sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1px"
+            android:layout_weight="1"
+            android:background="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

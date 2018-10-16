@@ -1,0 +1,126 @@
+<html>
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="content-type">
+        <title>
+            js调用java
+        </title>
+    </head>
+    
+    <body>
+        <p>
+            <xmp id="show">
+            </xmp>
+        </p>
+        <p>
+            <xmp id="init">
+            </xmp>
+        </p>
+        <!--<p>-->
+            <!--<input type="text" id="text1" value="用户名(username)" />-->
+        <!--</p>-->
+        <!--<p>-->
+            <!--<input type="text" id="text2" value="password" />-->
+        <!--</p>-->
+
+        </p>
+        <p>
+            <input type="button" id="enter1" value="调用Native方法" onclick="testClick1();"
+            />
+        </p>
+        <!--<p>-->
+            <!--<input type="button" id="enter5" value="发消息给Native" onclick="testClick();"-->
+            <!--/>-->
+        <p>
+            <input type="button" id="enter6" value="显示html" onclick="testDiv();" />
+        </p>
+        <p>
+            <input type="file" value="打开文件" />
+        </p>
+    </body>
+    <script>
+        function testDiv() {
+            document.getElementById("show").innerHTML = document.getElementsByTagName("html")[0].innerHTML;
+        }
+
+        function testClick() {
+
+            //send message to native
+            var data = {id: 1, content: "这是一个图片 <img src=\"a.png\"/> test\r\nhahaha"};
+            window.WebViewJavascriptBridge.send(
+                data
+                , function(responseData) {
+                    document.getElementById("show").innerHTML = "repsonseData from java, data = " + responseData
+                }
+            );
+
+        }
+
+        function testClick1() {
+
+            /*
+            call native method
+            需要原生做出什么动作可以从这里添加并调用
+            需要做出什么动作由{'tag': 1}决定
+            示例：
+            1:若传参 {'tag': 1} -- 需要关闭页面，返回到之前的原生界面
+            2:若传参 {'tag': 2} -- 跳转原生的登录注册界面。登录成功会通过下面的functionInJs自动将登录信息传过来的
+            3:若传参 {'tag': 3,"msg":"hello world"} -- 显示原生的闪烁的一行提示文字
+            4:若传参 {'tag': 4,"title":"alert:","msg":"hello world"} -- 调用安卓提示弹出框 提示文字 alert something
+            "submitFromWeb"为与移动端交互调用的固定方法名，不可更改
+            */
+            window.WebViewJavascriptBridge.callHandler(
+                'submitFromWeb'
+                , {'tag': 2}
+                , function(responseData) {
+                    document.getElementById("show").innerHTML = "返回结果Json:" + responseData
+                }
+            );
+        }
+
+        function bridgeLog(logContent) {
+            document.getElementById("show").innerHTML = logContent;
+        }
+
+        function connectWebViewJavascriptBridge(callback) {
+            if (window.WebViewJavascriptBridge) {
+                callback(WebViewJavascriptBridge)
+            } else {
+                document.addEventListener(
+                    'WebViewJavascriptBridgeReady'
+                    , function() {
+                        callback(WebViewJavascriptBridge)
+                    },
+                    false
+                );
+            }
+        }
+
+        connectWebViewJavascriptBridge(function(bridge) {
+            bridge.init(function(message, responseCallback) {
+                console.log('JS got a message', message);
+                var data = {
+                    'Javascript Responds': '测试中文!'
+                };
+
+                if (responseCallback) {
+                    console.log('JS responding with', data);
+                    responseCallback(data);
+                }
+            });
+            /*
+            无论如何在这里你都会被动接收到移动端传给你的用户信息--data，json格式--包含用户id、用户名、定位经纬度
+            返回示例：{"id":714931894383297,"location":{"latitude":39.735739,"longitude":116.159096},"nickname":"迪丽热巴"}
+            "functionInJs"为与移动端交互调用的固定方法名，不可更改
+            */
+            bridge.registerHandler("functionInJs", function(data, responseCallback) {
+                document.getElementById("show").innerHTML = ("接收到移动端Json:" + data);
+                if (responseCallback) {
+                    var responseData = "Javascript Says Right back aka!";
+                    responseCallback(responseData);
+                }
+            });
+        })
+    </script>
+
+</html>
+

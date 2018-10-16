@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    android:orientation="vertical">
+
+    <include layout="@layout/normal_top_header" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/lin_et_card_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/bg_editmoney"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/poi_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="18dp"
+                android:layout_weight="1"
+                android:text="开户行"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_card_name"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="5dp"
+                android:layout_weight="3"
+                android:background="@color/white"
+                android:hint="输入开户行"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_et_card_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lin_et_card_name"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@null"
+            android:dividerHeight="2dp"
+            android:fastScrollEnabled="true"
+            android:scrollbars="none"
+            android:scrollingCache="false"
+            android:visibility="gone"></ListView>
+    </RelativeLayout>
+</LinearLayout>

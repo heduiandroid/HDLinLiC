@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="11dp"
+        android:layout_width="match_parent"
+        android:layout_height="122dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_margin="10dp"
+                android:id="@+id/shop_sort_findfood_item_avatar_im"
+                android:layout_width="95dp"
+                android:layout_height="95dp" />
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_marginBottom="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/shop_sort_findfood_item_name_tv"
+                        android:textColor="@color/color_shop_sort_text_item"
+                        android:text="---"
+                        android:textSize="14dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_marginRight="1dp"
+                            android:src="@mipmap/ic_shop_main_item_distance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:textSize="11dp"
+                            android:id="@+id/shop_sort_findfood_item_distance_tv"
+                            android:layout_marginRight="10dp"
+                            android:textColor="@color/color_shop_sort_text_location"
+                            android:text="--"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <ImageView
+                            android:layout_marginRight="1dp"
+                            android:src="@mipmap/ic_shop_main_item_like"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:textSize="11dp"
+                            android:id="@+id/shop_sort_findfood_item_like_tv"
+                            android:layout_marginRight="10dp"
+                            android:textColor="@color/color_shop_sort_text_location"
+                            android:text="--"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <ImageView
+                            android:layout_marginRight="1dp"
+                            android:src="@mipmap/ic_shop_main_item_collect"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:textSize="11dp"
+                            android:layout_marginRight="10dp"
+                            android:id="@+id/shop_sort_findfood_item_collection_tv"
+                            android:textColor="@color/color_shop_sort_text_location"
+                            android:text="--"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_marginBottom="12dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                        android:rating="2.5"
+                        android:id="@+id/shop_sort_findfood_item_star_rb"
+                        android:isIndicator="true"
+                        android:foregroundGravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialRatingBar.RatingBar_Mid"
+                        app:mrb_progressTint="@color/orange"
+                        app:mrb_secondaryProgressTint="@color/orange"
+                        />
+                    <TextView
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/shop_sort_findfood_item_price_tv"
+                        android:textColor="@color/color_shop_sort_text_price"
+                        android:textSize="11dp"
+                        android:text="--"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <TextView
+                    android:textSize="11dp"
+                    android:id="@+id/shop_sort_findfood_item_location_tv"
+                    android:textColor="@color/color_shop_sort_text_location"
+                    android:text="地址:--"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

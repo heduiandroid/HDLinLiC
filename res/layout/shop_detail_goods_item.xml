@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:clipChildren="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:background="@drawable/shop_detail_back"
+            android:paddingBottom="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.facebook.drawee.view.SimpleDraweeView
+                fresco:roundedCornerRadius="3dp"
+                fresco:roundTopLeft="true"
+                fresco:roundTopRight="true"
+                fresco:roundingBorderWidth="1dp"
+                fresco:roundingBorderColor="@color/pink_commercial_shouling"
+
+
+                android:layout_marginRight="0.5dp"
+                android:layout_marginLeft="0.5dp"
+                android:layout_marginTop="0.5dp"
+                fresco:progressBarImageScaleType="centerInside"
+                fresco:progressBarAutoRotateInterval="5000"
+                fresco:failureImage="@mipmap/default_background"
+                fresco:failureImageScaleType="centerInside"
+                fresco:retryImage="@mipmap/default_background"
+                fresco:retryImageScaleType="centerInside"
+                fresco:placeholderImage="@mipmap/default_background"
+
+                android:id="@+id/shop_detail_goods_item_avatar_im"
+                android:layout_width="match_parent"
+                android:layout_height="153dp" />
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:maxEms="6"
+                    android:maxLines="1"
+                    android:ellipsize="marquee"
+                    android:id="@+id/shop_detail_goods_item_name_tv"
+                    android:textColor="@color/color_shop_sort_text_down"
+                    android:textSize="13dp"
+                    android:text="--"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/shop_detail_goods_item_price_tv"
+                    android:textSize="13dp"
+                    android:textColor="@color/color_cart_item_sum"
+                    android:layout_alignParentRight="true"
+                    android:text="--"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <RelativeLayout
+                android:id="@+id/shop_detail_goods_item_add_container_rl"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/shop_detail_goods_item_reduce_ib"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="50dp"
+                    android:layout_height="35dp">
+                    <ImageView
+                        android:background="@mipmap/ic_shop_detail_goods_reduce"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/shop_detail_goods_item_more_ib"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="50dp"
+                    android:layout_height="35dp">
+                    <ImageView
+                        android:background="@mipmap/ic_shop_detail_goods_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_activity_tag"
+                android:layout_margin="2dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="返券"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:background="@drawable/tag_bgorange"
+                android:visibility="gone"/>
+            <com.linli.consumer.widget.GoodsNumLayout
+                android:visibility="gone"
+                android:id="@+id/shop_detail_goods_item_num_widget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

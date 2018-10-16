@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_red_bag_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.linli.consumer.ui.directbusiness.RedBagDialogActivity">
+    <ImageView
+        android:id="@+id/iv_redbag"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/pic_redbag_show"/>
+    <View
+        android:id="@id/view_line"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp" />
+    <TextView
+        android:id="@+id/tv_redbag_sum"
+        android:paddingBottom="45dp"
+        android:layout_above="@id/view_line"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="￥0.00"
+        android:textSize="35sp"
+        android:textColor="@color/orange"/>
+    <ImageView
+        android:id="@id/iv_close"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/iv_redbag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_qr_dialog_close"/>
+</RelativeLayout>

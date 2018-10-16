@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_all_my_eggs"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.linli.consumer.ui.main.AllMyEggsActivity">
+    <include
+        layout="@layout/normal_top_header" />
+    <GridView
+        android:id="@+id/gv_myeggs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="3">
+
+    </GridView>
+    <TextView
+        android:id="@+id/tv_nodata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="没有哦~马上到店去领蛋吧~"
+        android:textColor="@color/notselect_text"
+        android:visibility="gone"/>
+</LinearLayout>

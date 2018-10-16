@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+
+            <ImageView
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:layout_centerVertical="true"
+                android:id="@+id/shop_self_title_back_im"
+                android:src="@mipmap/back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/selector_transparent"/>
+
+            <TextView
+                android:textSize="18sp"
+                android:id="@+id/shop_self_title_name_tv"
+                android:gravity="center_vertical"
+                android:textColor="@color/gray"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@id/shop_self_title_back_im" />
+            <LinearLayout
+                android:paddingRight="5dp"
+                android:layout_marginRight="10dp"
+                android:id="@+id/shop_self_title_vip_ll"
+                android:gravity="center_vertical"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/selector_transparent">
+                <ImageView
+                    android:id="@+id/shop_detail_title_collection_im"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/selector_transparent"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_shop_detail_title_collection_black1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/shop_self_title_vip_tv"
+                    android:textSize="14sp"
+                    android:textColor="@color/gray"
+                    android:text="收藏"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <View
+            android:background="@color/gray_fooddetails_bag"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--<com.hd.hdappyzx.widget.CircleImageView
+                android:layout_centerVertical="true"
+                android:src="@color/blue"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:id="@+id/shop_self_avatar_cim" />-->
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:layout_centerVertical="true"
+                android:id="@+id/shop_self_avatar_cim"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                fresco:actualImageScaleType="centerInside"
+                fresco:roundAsCircle="true"
+                fresco:roundingBorderColor="@color/color_shop_sort_health_item_time"
+                fresco:roundingBorderWidth="0.5dp"
+                fresco:placeholderImage="@mipmap/default_background"
+                fresco:placeholderImageScaleType="centerInside"
+                fresco:failureImage="@mipmap/imageview_refresh"
+                fresco:failureImageScaleType="centerInside"/>
+
+
+            <LinearLayout
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/shop_self_avatar_cim"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+
+                <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                    android:rating="5"
+                    android:id="@+id/shop_self_rb"
+                    android:isIndicator="true"
+                    android:foregroundGravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialRatingBar.RatingBar"
+                    app:mrb_progressTint="@color/orange"
+                    app:mrb_secondaryProgressTint="@color/orange"
+                    />
+
+                <TextView
+                    android:textColor="@color/color_shop_detail_self"
+                    android:layout_marginTop="2dp"
+                    android:textSize="12dp"
+                    android:maxEms="5"
+                    android:singleLine="true"
+                    android:id="@+id/shop_self_score_tv"
+                    android:gravity="center"
+                    android:text="积分:--"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:layout_marginRight="21dp"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/ll_concerned_num"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:id="@+id/shop_self_colletion_im"
+                        android:src="@mipmap/ic_shop_main_item_collection"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="11dp"
+                        android:layout_marginRight="6dp"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/shop_self_colletion_tv"
+                        android:text="—"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_centerVertical="true"
+                        android:id="@+id/shop_self_like_im"
+                        android:src="@mipmap/ic_shop_main_item_like"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:textSize="11dp"
+                        android:maxLines="1"
+                        android:layout_marginRight="6dp"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/shop_self_like_tv"
+                        android:text="—"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="29dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <LinearLayout
+                android:id="@+id/ll_navigation"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:src="@mipmap/ic_shop_detail_self_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/shop_self_location_tv"
+                    android:textSize="12dp"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:textColor="@color/color_shop_detail_self_title"
+                    android:layout_marginLeft="10dp"
+                    android:text="店铺地址-点击可导航"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <View
+                    android:background="@color/gray_fooddetails_bag"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"></View>
+                <ImageView
+                    android:id="@+id/shop_self_message_im"
+                    android:layout_marginLeft="20dp"
+                    android:src="@mipmap/ic_shop_detail_self_message"
+                    android:background="@drawable/selector_transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:id="@+id/shop_self_call_im"
+                    android:layout_marginLeft="25dp"
+                    android:src="@mipmap/ic_shop_detail_self_call"
+                    android:background="@drawable/selector_transparent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:background="@color/gray_fooddetails_bag"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <RelativeLayout
+            android:id="@+id/shop_self_qr_rl"
+            android:paddingLeft="20dp"
+            android:paddingRight="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/selector_transparent">
+            <ImageView
+                android:id="@+id/shop_self_im"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_shop_detail_self_qr1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textSize="14dp"
+                android:textColor="@color/gray"
+                android:layout_marginLeft="8dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/shop_self_im"
+                android:text="店铺二维码"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_shop_detail_self_qr2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+        <View
+            android:background="@color/gray_fooddetails_bag"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <RelativeLayout
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_shop_detail_self_can"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="14dp"
+                    android:textColor="@color/gray"
+                    android:layout_marginLeft="8dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/shop_self_im"
+                    android:text="营业资质"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+                <TextView
+                    android:layout_marginRight="25dp"
+                    android:id="@+id/shop_detail_self_license_tv"
+                    android:textSize="12dp"
+                    android:textColor="@color/color_shop_detail_self_sub"
+                    android:text="证件齐全"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <View
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/gray_fooddetails_bag"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"/>
+
+                <TextView
+                    android:textSize="12dp"
+                    android:textColor="@color/color_shop_detail_self_sub"
+                    android:layout_marginLeft="25dp"
+                    android:text="诚信商家"
+                    android:layout_width="69dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/shop_detail_self_sincerity_tv" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:paddingLeft="30dp"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/sdv_licence1"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    fresco:fadeDuration="300"
+                    fresco:actualImageScaleType="centerCrop"
+                    fresco:placeholderImage="@mipmap/default_background"
+                    fresco:placeholderImageScaleType="centerInside"
+                    fresco:failureImage="@mipmap/imageview_refresh"
+                    fresco:failureImageScaleType="centerInside"/>
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/sdv_licence2"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="100dp"
+                    android:layout_height="80dp"
+                    fresco:fadeDuration="300"
+                    fresco:actualImageScaleType="centerCrop"
+                    fresco:placeholderImage="@mipmap/default_background"
+                    fresco:placeholderImageScaleType="centerInside"
+                    fresco:failureImage="@mipmap/imageview_refresh"
+                    fresco:failureImageScaleType="centerInside"/>
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+                <TextView
+                    android:layout_marginRight="25dp"
+                    android:id="@+id/shop_detail_self_unsubscribe_tv"
+                    android:textSize="12dp"
+                    android:textColor="@color/color_shop_detail_self_sub"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="随时退订"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <View
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/gray_fooddetails_bag"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:id="@+id/shop_detail_self_timeoutFree_tv"
+                    android:textSize="12dp"
+                    android:textColor="@color/color_shop_detail_self_sub"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_marginLeft="25dp"
+                    android:text="超时免单"
+                    android:layout_width="69dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </RelativeLayout>
+        <View
+            android:background="@color/gray_fooddetails_bag"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <RelativeLayout
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_shop_detail_self_support"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:textSize="14dp"
+                    android:textColor="@color/gray"
+                    android:layout_marginLeft="8dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/shop_self_im"
+                    android:text="商家支持"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_alignParentRight="true"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp">
+                    <TextView
+                        android:layout_marginRight="15dp"
+                        android:id="@+id/shop_detail_self_parking_tv"
+                        android:textSize="12dp"
+                        android:textColor="@color/color_shop_detail_self_sub"
+                        android:text="停车"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <View
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="@color/gray_fooddetails_bag"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"/>
+
+                    <TextView
+                        android:layout_marginRight="15dp"
+                        android:id="@+id/shop_detail_self_limitService_tv"
+                        android:textSize="12dp"
+                        android:textColor="@color/color_shop_detail_self_sub"
+                        android:layout_marginLeft="15dp"
+                        android:text="配送"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <View
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="@color/gray_fooddetails_bag"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:id="@+id/shop_detail_self_bill_tv"
+                        android:textSize="12dp"
+                        android:textColor="@color/color_shop_detail_self_sub"
+                        android:layout_marginLeft="15dp"
+                        android:text="发票"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/shop_self_support_ll"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp">
+                    <TextView
+                        android:layout_marginRight="15dp"
+                        android:id="@+id/shop_self_offline_tv"
+                        android:textSize="12dp"
+                        android:textColor="@color/color_shop_detail_self_sub"
+                        android:text="货到付款"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <View
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="3dp"
+                        android:background="@color/gray_fooddetails_bag"
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:id="@+id/shop_self_online_tv"
+                        android:textSize="12dp"
+                        android:textColor="@color/color_shop_detail_self_sub"
+                        android:layout_marginLeft="15dp"
+                        android:text="线上支付"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+        <View
+            android:background="@color/gray_fooddetails_bag"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+    </LinearLayout>
+
+
+</LinearLayout>

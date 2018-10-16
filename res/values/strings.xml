@@ -1,0 +1,221 @@
+<resources>
+    <string name="app_name">邻里易购</string>
+    <string name="index_name">网咖</string>
+    <string name="id_card">身份证</string>
+    <string name="id_card_number">请输入身份证号</string>
+
+    <string name="say_sth">请说出您想要的...</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_test_json">TestJsonActivity</string>
+    <string name="title_activity_login_yzh">LoginYZHActivity</string>
+    <string name="title_activity_register_yzx">RegisterYZXActivity</string>
+    <string name="title_activity_forget_password">ForgetPasswordActivity</string>
+    <string name="title_activity_search_sm">SearchSMActivity</string>
+    <string name="title_activity_before_order_confirm">BeforeOrderConfirmActivity</string>
+    <string name="title_activity_district_choose">DistrictChooseActivity</string>
+    <string name="title_activity_yzx_notification">YzxNotificationActivity</string>
+    <string name="title_activity_nearby_choiceness">NearbyChoicenessActivity</string>
+    <string name="title_activity_yzxindex">YZXIndexActivity</string>
+    <string name="title_activity_personal_center">PersonalCenterActivity</string>
+    <string name="title_activity_message">MessageActivity</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="title_activity_entertainment">EntertainmentActivity</string>
+    <string name="title_activity_dining">DiningActivity</string>
+    <string name="title_activity_main_services">MainServicesActivity</string>
+    <string name="title_activity_my_conversation">MyConversationActivity</string>
+    <string name="title_activity_take_picture_buy">TakePictureBuyActivity</string>
+    <string name="title_activity_scanning_buy">ScanningBuyActivity</string>
+    <string name="title_activity_voice_chat_buy">VoiceChatBuyActivity</string>
+    <string name="title_activity_collection">CollectionActivity</string>
+    <string name="title_activity_orders">OrdersActivity</string>
+    <string name="title_activity_ewallet">EWalletActivity</string>
+    <string name="title_activity_business_info">BusinessInfoActivity</string>
+    <string name="title_activity_setting">SettingActivity</string>
+    <string name="title_activity_join_us">JoinUsActivity</string>
+    <string name="title_activity_help">HelpActivity</string>
+    <string name="title_activity_personal_data">PersonalDataActivity</string>
+    <string name="title_activity_levels_user">LevelsUserActivity</string>
+    <string name="title_activity_upload_way">UploadWayActivity</string>
+    <string name="title_activity_update_nick_name">UpdateNickNameActivity</string>
+    <string name="title_activity_update_sex">UpdateSexActivity</string>
+    <string name="title_activity_reset_password">ResetPasswordActivity</string>
+    <string name="title_activity_suggestion">SuggestionActivity</string>
+    <string name="title_activity_business_info_detail">BusinessInfoDetailActivity</string>
+    <string name="title_activity_address_manage">AddressManageActivity</string>
+    <string name="title_activity_setting_message">SettingMessage</string>
+    <string name="title_activity_about_us">AboutUsActivity</string>
+    <string name="title_activity_check_version">CheckVersionActivity</string>
+    <string name="title_activity_shtmenu">SHTMenuActivity</string>
+    <string name="title_activity_change_area">ChangeAreaActivity</string>
+    <string name="title_activity_message_detail">MessageDetailActivity</string>
+    <string name="title_activity_search_results">SearchResultsActivity</string>
+    <string name="title_activity_feedback_detail">FeedbackDetailActivity</string>
+    <string name="title_activity_smshop_index">SMShopIndexActivity</string>
+    <string name="title_activity_dialog_off_line">DialogOffLineActivity</string>
+    <string name="title_activity_new_or_update_address">NewOrUpdateAddressActivity</string>
+    <string name="title_activity_select_city">SelectCityActivity</string>
+    <string name="title_activity_find_out">FindOutActivity</string>
+    <string name="title_activity_send_requirements">SendRequirementsActivity</string>
+    <string name="title_activity_range_change">RangeChangeActivity</string>
+    <string name="title_activity_shop_type_change">ShopTypeChangeActivity</string>
+    <string name="title_activity_service_list">ServiceListActivity</string>
+    <string name="title_activity_service_shop_detail">ServiceShopDetailActivity</string>
+    <string name="title_activity_submit_order_services">SubmitOrderServicesActivity</string>
+    <string name="title_activity_choose_date">ChooseDateActivity</string>
+    <string name="title_activity_shop_type_choose_actovity">ShopTypeChooseActovity</string>
+    <string name="title_activity_shops_area_choose_actovity">ShopsAreaChooseActovity</string>
+    <string name="title_activity_pai_yi_pai">PaiYiPaiActivity</string>
+    <string name="title_activity_setting_pai_yi_pai">SettingPaiYiPaiActivity</string>
+    <!-- add   wwy  2016-5-14! start-->
+    <string name="order_display_activity_address">莆田系</string>
+    <string name="order_display_activity_phone">15289543215</string>
+    <string name="order_display_activity_postcode">101000</string>
+    <string name="order_display_activity_city">北京</string>
+    <string name="order_display_activity_country">北京市</string>
+    <string name="order_display_activity_west">西城区</string>
+    <string name="order_display_activity_adddetails">广内大街广宜街核桃园南里4号楼1单元302室</string>
+    <string name="title_activity_t">TActivity</string>
+    <string name="order_health_contents">
+     喜欢就好了，无须搀着金钱利益，单纯的收藏乐趣足矣。古人云“一生一菩提,一串菩提是一个人带一辈子的，
+    现在很多发烧友买完要么一扔，要么玩2个月卖了，这些人我认为算不上文玩迷。
+    东西不在好坏也不再贵贱，只在乎你的心，自己玩的东西时间长了必然会有感情，而且菩提本身是和尚念经的，
+    这些东西本身带有灵气，是佑人平安的东西，老卖来卖去的。把它带给你的平安卖给别人了，还有何意义呢？人这辈子平平安安就是福，
+    钱再多也是物质上的，我不是说有钱不对，但是人嘛活的要开心，不能被金钱所累，
+    我很年轻，我觉得钱对我来说不是重要的，重要的是目标，
+    奋斗才是 人这辈子应该做的事，哪怕到头来什么也没成功，起码过程我努力过了，所以希望玩友们能
+</string>
+    <string name="title_activity_pai_yi_pai_introduce">PaiYiPaiIntroduceActivity</string>
+    <string name="title_activity_meeting_apply">MeetingApplyActivity</string>
+    <string name="title_activity_customertype_choose">CustomertypeChooseActivity</string>
+    <string name="title_activity_calling_index">CallingIndexActivity</string>
+    <string name="title_activity_red_bag">RedBagActivity</string>
+    <string name="title_activity_zhuan_pan">ZhuanPanActivity</string>
+    <string name="title_activity_shop_cart">ShopCartActivity</string>
+    <string name="title_activity_pai_yi_pai_product">PaiYiPaiProductActivity</string>
+    <string name="title_activity_pai_yi_pai_announcement">PaiYiPaiAnnouncementActivity</string>
+    <string name="title_activity_pai_yi_pai_advertisement">PaiYiPaiAdvertisementActivity</string>
+    <string name="title_activity_chat">ChatActivity</string>
+    <string name="title_activity_conversation">ConversationActivity</string>
+    <string name="title_activity_online_pay_method">OnlinePayMethodActivity</string>
+    <string name="pay_result_callback_msg" formatted="false">微信支付结果：%s</string>
+    <string name="title_activity_pai_yi_pai_foods">PaiYiPaiFoodsActivity</string>
+    <string name="title_activity_pai_yi_pai_service">PaiYiPaiServiceActivity</string>
+    <string name="title_activity_pai_yi_pai_advertisement_pic">PaiYiPaiAdvertisementPicActivity
+    </string>
+    <string name="title_activity_pai_yi_pai_advertisement_text">PaiYiPaiAdvertisementTextActivity
+    </string>
+    <string name="title_activity_pai_yi_pai_advertisement_other">
+        PaiYiPaiAdvertisementOtherActivity
+    </string>
+    <string name="title_activity_pai_yi_pai_nearby_shops">PaiYiPaiNearbyShopsActivity</string>
+    <string name="title_activity_complaint">ComplaintActivity</string>
+    <string name="title_activity_shop_cart_ordered_food">ShopCartOrderedFoodActivity</string>
+    <string name="title_activity_choose_order_type">ChooseOrderTypeActivity</string>
+    <string name="title_activity_orders_food">OrdersFoodActivity</string>
+    <string name="title_activity_qrcode_show">QRCodeShowActivity</string>
+    <string name="title_activity_discount_coupon">DiscountCouponActivity</string>
+    <string name="title_activity_my_concerned_list">MyConcernedListActivity</string>
+    <string name="title_activity_pay_success">PaySuccessActivity</string>
+    <string name="title_activity_no_internet_if_pai_pai">NoInternetIfPaiPaiActivity</string>
+    <string name="title_activity_order_detail">OrderDetailActivity</string>
+    <string name="title_activity_money_out">MoneyOutActivity</string>
+    <string name="title_activity_dialog_input_password">DialogInputPasswordActivity</string>
+    <string name="title_activity_money_out_success">MoneyOutSuccessActivity</string>
+    <string name="title_activity_money_in">MoneyInActivity</string>
+    <string name="title_activity_dialog_in_money_pay_pass">DialogInMoneyPayPassActivity</string>
+    <string name="title_activity_ewchange_bank_card">EWChangeBankCardActivity</string>
+    <string name="title_activity_ewadd_bank_card">EWAddBankCardActivity</string>
+    <string name="title_activity_rwsetting_pay_pwd">RWSettingPayPwdActivity</string>
+    <string name="title_activity_ewinput_pay_pwd">EWInputPayPwdActivity</string>
+    <string name="title_activity_ewsetting">EWSettingActivity</string>
+    <string name="title_activity_ewupdate_pay_password">EWUpdatePayPasswordActivity</string>
+    <string name="title_activity_yao_yi_yao">YaoYiYaoActivity</string>
+    <string name="title_activity_welcome">WelcomeActivity</string>
+    <string name="title_activity_meeting_list">MeetingListActivity</string>
+    <string name="title_activity_temple_he_dui_jieshao">TempleHeDuiJieshaoActivity</string>
+    <string name="title_activity_temple_shtjieshao">TempleSHTJieshaoActivity</string>
+    <string name="title_activity_temple_zcptjieshao">TempleZCPTJieshaoActivity</string>
+    <string name="title_activity_temple_chlmjieshao">TempleCHLMJieshaoActivity</string>
+    <string name="title_activity_temple_shtjdjieshao">TempleSHTJDJieshaoActivity</string>
+    <string name="title_activity_temple_xmzy">TempleXMZYActivity</string>
+    <string name="title_activity_temple_hylc">TempleHYLCActivity</string>
+    <string name="title_activity_good_choose_num">GoodChooseNumActivity</string>
+    <string name="title_activity_download_app">DownloadAppActivity</string>
+    <string name="title_activity_crop_photo">CropPhotoActivity</string>
+    <string name="title_activity_crop_head_pic">CropHeadPicActivity</string>
+    <string name="title_activity_choose_mall_total_cate">ChooseMallTotalCateActivity</string>
+    <!-- add   wwy  2016-5-14! end-->
+
+
+    <!-- V2 直营主页 分类-->
+    <string name="title_good_direct_str">精选专区</string>
+    <!-- V2 美食主页 分类-->
+    <string name="food_main_sort_findfood_str">找美食</string>
+    <string name="food_main_sort_market_str">逛市场</string>
+    <string name="food_main_sort_recipe_str">食靠谱</string>
+    <string name="food_main_sort_health_str">养生膳</string>
+
+    <!-- V2 精品专区主页 分类-->
+    <string name="food_main_sort_jingpin">精品</string>
+    <string name="food_main_sort_manjian">满减</string>
+    <string name="food_main_sort_tuangou">团购</string>
+    <string name="food_main_sort_zerobuy">0元购</string>
+
+    <!-- V2 商城主页 分类-->
+    <string name="shop_main_sort_nearby_shop">附近店铺</string>
+    <string name="shop_main_sort_wellchoice_str">精选专区</string>
+    <string name="shop_main_sort_coupon_str">优惠券</string>
+    <string name="shop_main_sort_flashsale_str">热卖商品</string>
+    <string name="shop_main_sort_all_str">更多</string>
+
+    <string name="shop_more">更多店铺</string>
+    <string name="shop_more_fresh">益招鲜</string>
+    <string name="shop_more_life">惠生活</string>
+    <string name="shop_more_fashion">时尚流</string>
+    <string name="shop_more_live">雅居馆</string>
+    <string name="shop_more_health">养生堂</string>
+
+    <string name="gravity_left">left</string>
+    <string name="gravity_center">center</string>
+    <string name="gravity_right">right</string>
+
+    <string name="service_cate1">美容/休闲</string>
+    <string name="service_cate2">医疗/健康</string>
+    <string name="service_cate3">家政/维修</string>
+    <string name="service_cate4">快递/物流</string>
+    <string name="service_cate5">住宿/旅游</string>
+    <string name="service_cate6">法律/保险</string>
+    <string name="service_cate7">地产/装修</string>
+    <string name="service_cate8">婚纱/摄影</string>
+    <string name="service_cate9">广告/印刷</string>
+    <string name="service_cate10">教育/培训</string>
+
+    <string name="myredbags">我的红包</string>
+    <string name="myredbags_type1">精选专区红包</string>
+    <string name="redbags_unused">未使用</string>
+    <string name="redbags_used">已使用</string>
+    <string name="redbags_tag">红包余额:</string>
+    <string name="redbags_tag_short">红包</string>
+    <string name="no_coupon_redbags">无可用</string>
+    <string name="have_coupon_redbags">个可用</string>
+    <string name="giveup_useing_coupon_redbags">不使用红包优惠</string>
+
+    <string name="order_submit">提交订单</string>
+    <string name="order_submited">订单已生成</string>
+
+    <string name="wechat_friend">微信好友</string>
+    <string name="wechat_friends">微信朋友圈</string>
+    <string name="songxiaobao_intro">送小宝是和兑科技倾力打造的一款高效、快捷、环保的物品递送APP;基于智能交通与快件递送分享理念，致力于为广大用户、商家和企业打造高效、便捷、安全的物品专人直送服务;满足商家和消费者在同城区快速购物、及时就餐的需求。</string>
+    <string name="returnmoney_alert">选择服务类型</string>
+    <string name="cancel_str">取消</string>
+    <string name="submit_str">提交</string>
+    <string name="comfirm_str">确定</string>
+    <string name="reson1">不想买了</string>
+    <string name="reson2">买错了</string>
+    <string name="reson3">其他</string>
+    <string name="reson4">仅退货</string>
+    <string name="reson4_extra">未收货(包含未签收),或商家协商同意前提下</string>
+    <string name="reson5">退款退货</string>
+    <string name="reson5_extra">已收货,需要退换已收到的货物</string>
+</resources>
+

@@ -1,0 +1,38 @@
+<pre name="code" class="html"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>这里是一个H5页面</title>
+</head>
+
+<body>
+<Button id="buttonId0" class="buttonClass" onclick="javascript:callNative.finishH5()">关闭（回到之前的原生页面，只Android可用）</Button>
+<Button id="buttonId1" class="buttonClass" onclick="javascript:callNative.toLogin()">登录（拉起登录原生页面，只Android可用）</Button>
+<Button id="buttonId2" class="buttonClass" onclick="javascript:callNative.showAlert('标题','这里写提示内容')">弹窗（拉起原生弹窗提示，只Android可用）</Button>
+<p id="utext">显示用户ID</p>
+<p id="lotext">显示当前用户经度</p>
+<p id="latext">显示当前用户纬度</p>
+
+<p>点击按键1 执行android中的 public void click0(String data1,String data2){}方法</p>
+
+
+<script>
+    function setRed(){
+        //这个方法设置 id 为 ptext 的元素的背景色为红色
+        var a = document.getElementById('utext');
+        a.style.backgroundColor="#F00";
+    }
+    function setUserId(userId){
+        //参数 userId 为android原生在此页加载完成后自动传过来的用户ID
+        var a = document.getElementById('utext');
+        a.innerHTML = userId;
+    }
+    function setLocation(lo,la){
+        //参数 lo,la 分别为android原生在此页加载完成后自动传过来的经度、纬度
+        var a = document.getElementById('lotext');
+        a.innerHTML = lo;
+        var b = document.getElementById('latext');
+        b.innerHTML = la;
+    }
+    </script>
+</body>

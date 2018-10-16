@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.linli.consumer.widget.BackLayout
+        android:id="@+id/cart_main_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.linli.consumer.widget.CartEmptyLayout
+        android:id="@+id/cart_main_empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <android.support.v7.widget.RecyclerView
+        android:background="@color/white"
+        android:id="@+id/cart_main_rc"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

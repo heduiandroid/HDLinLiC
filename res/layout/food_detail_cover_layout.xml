@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        fresco:roundedCornerRadius="3dp"
+        fresco:roundTopLeft="true"
+        fresco:roundTopRight="true"
+        fresco:roundBottomLeft="true"
+        fresco:roundBottomRight="true"
+        fresco:roundingBorderWidth="1dp"
+        fresco:roundingBorderColor="@color/gray_fooddetails_bag"
+        fresco:placeholderImage="@drawable/pic_yi_place"
+        android:clickable="true"
+        android:id="@+id/my_image_view"
+        android:layout_width="80dp"
+        android:layout_height="104dp"
+        />
+</LinearLayout>

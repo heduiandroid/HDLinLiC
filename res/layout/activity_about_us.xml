@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.linli.consumer.ui.main.AboutUsActivity">
+    <include
+        layout="@layout/normal_top_header" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_about"
+                android:padding="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:lineSpacingExtra="5dp"
+                android:text="        指令，是和兑科技倾力打造的消费主权时代颠覆性作品。改变原来以卖家为中心的交易规则为 “以满足顾客需求为中心，商户匹配相应服务” 的商业模型（Customer-Satisfaction Centered）（简称：CSC系统。），充分利用智能手机帮助各年龄段消费者均能实现简单、便捷的互动购物体验的一种订购方法和系统。解决了实体商户管理难题、销售难题、宣传难题、采购难题。全新的天、地、人、物四网合一的生态云商理念，引领实体店成功转型升级，开启消费者主权时代新篇章。"
+                />
+            <TextView
+                android:padding="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:lineSpacingExtra="5dp"
+                android:text="        电商+店商深度融合的商业模式，打通客户、会员体系，订单一体化、商品一体化，利用互联网的工具和先进的效率，协助线下传统零售企业，改造其流程与IT、ERP与CRM系统，增加商品品类和品质，改变商品的空间陈列，以满足线上客户日益提高的消费需求。指令正在构建以满足消费需求为中心的消费主权时代新型商业模式。重服务、轻仓储的分布式电商，让传统的商业迅速无缝切换到新型的零售商业4.0时代。"
+                />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

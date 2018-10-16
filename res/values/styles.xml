@@ -1,0 +1,300 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="PopBottomToTop">
+        <item name="android:windowEnterAnimation">@anim/pop_bottom2top</item>
+        <item name="android:windowExitAnimation">@anim/pop_top2bottom</item>
+    </style>
+    <style name="moreWidgetDuration" parent="@android:style/Theme.Translucent.NoTitleBar">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">false</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 模糊 -->
+    </style>
+    <style name="moreDuration" parent="@android:style/Theme.Translucent.NoTitleBar">
+        <item name="android:windowAnimationStyle">@style/more_duration</item>
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">false</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 模糊 -->
+    </style>
+    <style name="diallogStyleGeneral" parent="AppTheme">
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">false</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 模糊 -->
+    </style>
+    <style name="diallogStyleBottom" parent="AppTheme">
+    <item name="android:windowAnimationStyle">@style/anim_pop_bottom</item>
+    <item name="android:windowFrame">@null</item>
+    <!-- 边框 -->
+    <item name="android:windowIsFloating">false</item>
+    <!-- 是否浮现在activity之上 -->
+    <item name="android:windowIsTranslucent">true</item>
+    <!-- 半透明 -->
+    <item name="android:windowNoTitle">true</item>
+    <!-- 无标题 -->
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <!-- 背景透明 -->
+    <item name="android:backgroundDimEnabled">true</item>
+    <!-- 模糊 -->
+
+</style>
+    <style name="diallogStyleBottomWithAppTheme" parent="@android:style/Animation.Dialog">
+    <item name="android:windowFrame">@null</item>
+    <!-- 边框 -->
+    <item name="android:windowIsFloating">false</item>
+    <!-- 是否浮现在activity之上 -->
+    <item name="android:windowIsTranslucent">true</item>
+    <!-- 半透明 -->
+    <item name="android:windowNoTitle">true</item>
+    <!-- 无标题 -->
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <!-- 背景透明 -->
+    <item name="android:backgroundDimEnabled">true</item>
+    <!-- 模糊 -->
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    <style name="activityLeft2Right" parent="AppTheme">
+        <item name="android:windowAnimationStyle">@style/anim_left_right</item>
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">false</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 模糊 -->
+    </style>
+    <style name="activityRight2Left" parent="AppTheme">
+        <item name="android:windowAnimationStyle">@style/anim_right_left</item>
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">false</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 模糊 -->
+    </style>
+    <style name="activityRight2LeftNoBg" parent="@android:style/Theme.Translucent.NoTitleBar">
+        <item name="android:windowAnimationStyle">@style/anim_right_left</item>
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">false</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 模糊 -->
+    </style>
+    <style name="diallogStyleCenter" parent="AppTheme">
+        <item name="android:windowAnimationStyle">@style/anim_pop_center</item>
+        <item name="android:windowFrame">@null</item>
+        <!-- 边框 -->
+        <item name="android:windowIsFloating">false</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 背景透明 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 模糊 -->
+    </style>
+    <style name="more_duration">
+        <item name="android:windowEnterAnimation">@anim/more_duration_in</item>
+        <item name="android:windowExitAnimation">@anim/more_duration_in</item>
+    </style>
+    <style name="anim_pop_bottom">
+        <item name="android:windowEnterAnimation">@anim/pop_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/pop_bottom_out</item>
+    </style>
+    <style name="anim_pop_center">
+        <item name="android:windowEnterAnimation">@anim/pop_bottom_center_in</item>
+        <item name="android:windowExitAnimation">@anim/pop_bottom_center_out</item>
+    </style>
+    <style name="anim_left_right">
+        <item name="android:windowEnterAnimation">@anim/fling_in_left2right</item>
+    </style>
+    <style name="anim_right_left">
+        <item name="android:windowEnterAnimation">@anim/fling_in_right2left</item>
+    </style>
+
+    <!--   add   wwy   5-27  设置确定订单的弹出动画  !-->
+    <style name="popWindow_fororder_confirm" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/pop_fororder_confirm_up_in</item>
+        <item name="android:windowExitAnimation">@anim/pop_fororder_confirm_down_out</item>
+    </style>
+    <!--   add   wwy   5-27  设置一招鲜购买商品的弹出动画  !-->
+    <style name="popWindow_onefresh_goodgetail_confirm" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/pop_onefresh_buygood_out</item>
+        <item name="android:windowExitAnimation">@anim/pop_onefresh_buygood_dis</item>
+    </style>
+    <!--   add   wwy   5-16   !-->
+    <style name="check_box_theme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_style</item>
+    </style>
+
+    <!--   add   wwy   5-21   自定义星级   !-->
+    <style name="roomRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@mipmap/order_iv_star_red</item>
+        <item name="android:minHeight">20dp</item>
+    </style>
+    <style name="roomRatingBarOrange" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@mipmap/iv_commercial_index_star_yellow</item>
+        <item name="android:minHeight">20dp</item>
+    </style>
+    <style name="myRatingBarBig" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/ratingbar_orangebar_self</item>
+        <item name="android:minHeight">24dip</item>
+        <item name="android:maxHeight">24dip</item>
+    </style>
+    <!--   add   wwy   5-24  设置popwindow进入，消失动画  !-->
+    <style name="AnimTop" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_top_in</item>
+        <item name="android:windowExitAnimation">@anim/push_top_out</item>
+    </style>
+
+    <!-- 这里是自定义dialog的style-->
+    <style name="widget_mc_dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <!-- 这里是自定义购物车的dialog的style-->
+    <style name="widget_shop_cart_dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item><!--背景变暗-->
+        <item name="android:windowIsTranslucent">true</item><!--半透明-->
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    <!-- 这里是自定义dialog的style-->
+    <style name="widget_mc_cart_delete_dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <!-- 这里是沉浸式状态栏的style-->
+    <style name="ImageTranslucentTheme" parent="AppTheme">
+        <!--在Android 4.4之前的版本上运行，直接跟随系统主题-->
+    </style>
+
+    <style name="ColorTranslucentTheme" parent="AppTheme">
+    </style>
+
+    <!--  这里是引导界面的style-->
+    <style name="AppTheme.Fullscreen">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!--避免第一次进来白屏或黑屏-->
+    <style name="AppTheme.Splash">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="AppTheme.Splash.Fullscreen">
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="AppTheme.MM" parent="AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!--tablayout-->
+    <style name="CustomTabLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+
+    <!--     textView 通用属性       -->
+    <style name="text_name">
+        <item name="android:ems">6</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <!--textView 单行末尾滚动-->
+    <style name="text_marquee">
+        <item name="android:ems">6</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:maxLines">1</item>
+    </style>
+    <!--textView 行间距-->
+    <style name="text_line_space">
+        <item name="android:lineSpacingMultiplier">1.2</item>
+        <item name="android:lineSpacingExtra">6dp</item>
+    </style>
+
+    <style name="text_sort">
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="CircleCheckboxStyle" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/cb_circle_center_orange</item>
+    </style>
+    <style name="CircleCheckboxStyleDirect" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/cb_circle_center_orange_2</item>
+    </style>
+    <style name="DialogTransluteTopToBottom"  parent="AppTheme">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/AnimTop</item>
+    </style>
+</resources>

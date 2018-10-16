@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+
+    tools:context="com.linli.consumer.ui.main.PaiYiPaiIntroduceActivity">
+    <include
+        layout="@layout/normal_top_header" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="在拍一拍页面，用手“轻拍”手机屏幕，即可拍出惊喜。"
+            android:lineSpacingMultiplier="2"
+            android:textSize="16sp"/>
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="进入设置界面，可以屏蔽拍击后的音效。"
+            android:lineSpacingMultiplier="2"
+            android:textSize="16sp"/>
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="可以进入类别设置,来选择你想要拍到的内容，默认选择是拍出令您惊喜的商品哦~"
+            android:lineSpacingMultiplier="2"
+            android:textSize="16sp"/>
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*注意不要过于暴力拍击，以免损坏您的设备"
+            android:textColor="@color/gray"
+            android:lineSpacingMultiplier="2"/>
+    </LinearLayout>
+
+</LinearLayout>

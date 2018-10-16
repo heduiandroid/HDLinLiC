@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/shop_more_item_container_ll"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.facebook.drawee.view.SimpleDraweeView
+                fresco:progressBarImage="@drawable/pic_yi_progress"
+                fresco:progressBarImageScaleType="centerInside"
+                fresco:progressBarAutoRotateInterval="5000"
+                fresco:failureImage="@drawable/pic_yi_failure"
+                fresco:failureImageScaleType="centerInside"
+                fresco:retryImage="@drawable/pic_yi_retry"
+                fresco:retryImageScaleType="centerInside"
+                fresco:placeholderImage="@drawable/pic_yi_place"
+                android:id="@+id/shop_more_item_avatar_im"
+                android:layout_width="100dp"
+                android:layout_height="100dp" />
+
+            <LinearLayout
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_marginBottom="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/shop_more_item_name_tv"
+                        android:textColor="@color/color_shop_sort_text_item"
+                        android:text="--"
+                        android:textSize="15sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <LinearLayout
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_marginRight="1dp"
+                            android:src="@mipmap/ic_shop_main_item_distance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_marginLeft="10dp"
+                            android:textSize="11dp"
+                            android:id="@+id/shop_more_item_distance_tv"
+                            android:layout_marginRight="10dp"
+                            android:textColor="@color/color_shop_sort_text_location"
+                            android:text="--"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <ImageView
+                            android:visibility="gone"
+                            android:layout_marginRight="1dp"
+                            android:src="@mipmap/ic_shop_main_item_like"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:visibility="gone"
+                            android:textSize="11dp"
+                            android:id="@+id/shop_more_item_like_tv"
+                            android:layout_marginRight="10dp"
+                            android:textColor="@color/color_shop_sort_text_location"
+                            android:text="20"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <ImageView
+                            android:visibility="gone"
+                            android:layout_marginRight="1dp"
+                            android:src="@mipmap/ic_shop_main_item_collect"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:visibility="gone"
+                            android:textSize="11dp"
+                            android:layout_marginRight="10dp"
+                            android:id="@+id/shop_more_item_collection_tv"
+                            android:textColor="@color/color_shop_sort_text_location"
+                            android:text="300"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                        android:rating="5"
+                        android:id="@+id/shop_more_item_star_rb"
+                        android:isIndicator="true"
+                        android:foregroundGravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.MaterialRatingBar.RatingBar_Mid"
+                        app:mrb_progressTint="@color/orange"
+                        app:mrb_secondaryProgressTint="@color/orange"
+                        />
+                    <TextView
+                        android:visibility="gone"
+                        android:layout_marginLeft="10dp"
+                        android:id="@+id/shop_more_item_price_tv"
+                        android:textColor="@color/color_shop_sort_text_price"
+                        android:textSize="11dp"
+                        android:text="￥50/人"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <TextView
+                    android:layout_marginTop="1dp"
+                    android:textSize="12dp"
+                    android:id="@+id/shop_more_item_location_tv"
+                    android:textColor="@color/color_shop_sort_text_location"
+                    android:text="地址:"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <View
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/gray_fooddetails_bag"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:id="@+id/shop_more_coupon_ll"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@mipmap/ic_shop_more_item_coupon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/shop_more_coupon_tv"
+                            android:textColor="@color/color_shop_more_item_coupon"
+                            android:textSize="12dp"
+                            android:layout_marginLeft="7dp"
+                            android:text="--"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"/>
+                    <LinearLayout
+                        android:id="@+id/shop_more_voucher_ll"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@mipmap/ic_shop_more_item_voucher"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/shop_more_voucher_tv"
+                            android:textColor="@color/color_shop_more_item_coupon"
+                            android:textSize="12dp"
+                            android:layout_marginLeft="7dp"
+                            android:text="--"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

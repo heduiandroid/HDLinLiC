@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/food_detail_main_container_ll"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.facebook.drawee.view.SimpleDraweeView
+            fresco:progressBarImage="@drawable/pic_yi_progress"
+            fresco:progressBarImageScaleType="centerInside"
+            fresco:progressBarAutoRotateInterval="5000"
+            fresco:failureImage="@drawable/pic_yi_failure"
+            fresco:failureImageScaleType="centerInside"
+            fresco:retryImage="@drawable/pic_yi_retry"
+            fresco:retryImageScaleType="centerInside"
+            fresco:placeholderImage="@drawable/pic_yi_place"
+            android:id="@+id/food_detail_main_container_avatar_big_im"
+            android:layout_width="match_parent"
+            android:layout_height="102dp" />
+        <LinearLayout
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="14dp"
+                    android:textColor="@color/color_food_detail_name_tv"
+                    android:text="菜品名称:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:id="@+id/food_detail_main_container_name_tv"
+                    android:textSize="14dp"
+                    android:textColor="@color/color_food_detail_sub_name_tv"
+                    android:layout_marginLeft="8dp"
+                    android:text="水果披萨"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="14dp"
+                    android:textColor="@color/color_food_detail_name_tv"
+                    android:text="主料:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:id="@+id/food_detail_main_container_mainingredient_tv"
+                    android:textSize="14dp"
+                    android:textColor="@color/color_food_detail_sub_name_tv"
+                    android:layout_marginLeft="8dp"
+                    android:text="鸡蛋，生菜，食用油，小麦粉"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="14dp"
+                    android:textColor="@color/color_food_detail_name_tv"
+                    android:text="辅料:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:id="@+id/food_detail_main_container_subingredient_tv"
+                    android:textSize="14dp"
+                    android:textColor="@color/color_food_detail_sub_name_tv"
+                    android:layout_marginLeft="8dp"
+                    android:text="味精，水，食用油"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:textSize="14dp"
+                        android:textColor="@color/orange"
+                        android:text="￥36"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/food_detail_main_container_price_tv" />
+
+                    <LinearLayout
+                        android:layout_marginLeft="20dp"
+                        android:orientation="horizontal"
+                        android:layout_marginRight="15dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageButton
+                            android:id="@+id/food_detail_main_container_reduce_ib"
+                            android:layout_weight="1"
+                            android:background="@mipmap/ic_shop_cart_dialog_reduce"
+                            android:layout_centerVertical="true"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/food_detail_main_container_num_tv"
+                            android:textSize="14dp"
+                            android:textColor="@color/orange"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:background="@mipmap/ic_shop_cart_dialog_num"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" />
+                        <ImageButton
+                            android:id="@+id/food_detail_main_container_more_ib"
+                            android:layout_weight="1"
+                            android:background="@mipmap/ic_shop_cart_dialog_more"
+                            android:layout_centerVertical="true"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <View
+            android:layout_marginTop="12dp"
+            android:background="@color/gray_fooddetails_bag"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+        <!--<com.hd.hdappyzx.widget.coverflowview.CoverFlowView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/food_detail_main_fc"
+            android:layout_width="match_parent"
+            android:layout_height="155dp"
+            app:coverflowGravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:coverflowLayoutMode="wrap_content"
+            app:visibleViews="7"/>-->
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/food_detail_main_single_im"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="124dp" />
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

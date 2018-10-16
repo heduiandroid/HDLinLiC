@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_show_qrcode_acitivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.linli.consumer.ui.main.ShowQRCodeAcitivity">
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="请给商家扫码"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/gray"
+            android:gravity="bottom|center_horizontal"
+            android:background="@color/white"/>
+        <ImageView
+            android:id="@+id/iv_coupon_qrcode"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            android:src="@mipmap/default_background"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--圆形头像-->
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+
+    <!--loopView-->
+    <declare-styleable name="LoopRotarySwitchView">
+        <attr name="orientation">
+            <enum name="vertical" value="0"/>
+            <enum name="horizontal" value="1"/>
+        </attr>
+        <attr name="autoRotation" format="boolean"/>
+        <attr name="r" format="dimension"/>
+
+        <attr name="direction">
+            <enum name="left" value="0"/>
+            <enum name="right" value="1"/>
+        </attr>
+
+    </declare-styleable>
+
+    <declare-styleable name="CoverFlowView">
+        <attr name="visibleViews" format="integer" />
+        <!--<attr name="reflectionHeight" format="fraction" />-->
+        <!--<attr name="reflectionGap" format="dimension" />-->
+        <!--<attr name="topImageClickEnable" format="boolean" />-->
+        <attr name="coverflowGravity" format="enum">
+            <enum name="top" value="0" />
+            <enum name="bottom" value="1" />
+            <enum name="center_vertical" value="2" />
+        </attr>
+        <attr name="coverflowLayoutMode" format="enum">
+            <enum name="match_parent" value="0"/>
+            <enum name="wrap_content" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="TagFlowLayout">
+        <attr name="auto_select_effect" format="boolean"></attr>
+        <attr name="max_select" format="integer"></attr>
+        <attr name="gravity">
+            <enum name="left" value="-1" />
+            <enum name="center" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>

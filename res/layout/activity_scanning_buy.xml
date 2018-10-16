@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.linli.consumer.ui.main.ScanningBuyActivity">
+    <include
+        android:id="@+id/header"
+        layout="@layout/normal_top_header" />
+    <ListView
+        android:id="@+id/lv_scaned_product"
+        android:layout_below="@id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+    </ListView>
+    <TextView
+        android:id="@+id/tv_errormsg"
+        android:gravity="center"
+        android:layout_below="@id/header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="正在处理中"/>
+    <ImageView
+        android:id="@+id/iv_shopcart"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/icon_shopcart"
+        android:visibility="gone"/>
+    <ImageView
+        android:id="@+id/iv_have_new"
+        android:layout_alignTop="@id/iv_shopcart"
+        android:layout_alignRight="@id/iv_shopcart"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:src="@mipmap/imageview_new"
+        android:visibility="gone"/>
+</RelativeLayout>

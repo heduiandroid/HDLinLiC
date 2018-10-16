@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/shop_sort_flashsale_item_container_ll"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="15dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.facebook.drawee.view.SimpleDraweeView
+                    fresco:progressBarImage="@drawable/pic_yi_progress"
+                    fresco:progressBarImageScaleType="centerInside"
+                    fresco:progressBarAutoRotateInterval="5000"
+                    fresco:failureImage="@drawable/pic_yi_failure"
+                    fresco:failureImageScaleType="centerInside"
+                    fresco:retryImage="@drawable/pic_yi_retry"
+                    fresco:retryImageScaleType="centerInside"
+                    fresco:placeholderImage="@drawable/pic_yi_place"
+                    android:id="@+id/shop_sort_flashsale_item_avatar_im"
+                    android:layout_width="116dp"
+                    android:layout_height="117dp" />
+
+                <LinearLayout
+                    android:layout_marginLeft="8dp"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent">
+                                <TextView
+                                    android:id="@+id/shop_sort_flashsale_item_name_tv"
+                                    android:textColor="@color/navagation"
+                                    android:textSize="15dp"
+                                    android:text="--"
+                                    android:maxLines="2"
+                                    android:ellipsize="end"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                                <TextView
+                                    android:visibility="gone"
+                                    android:id="@+id/shop_sort_flashsale_item_type_tv"
+                                    android:layout_marginTop="6dp"
+                                    android:textColor="@color/color_shop_sort_text_price"
+                                    android:textSize="10dp"
+                                    android:text=""
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" />
+                                <LinearLayout
+                                    android:layout_marginTop="16dp"
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:textSize="12dp"
+                                        android:textColor="@color/color_shop_detail_self_sub"
+                                        android:text="品牌："
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+                                    <TextView
+                                        android:id="@+id/shop_sort_flashsale_item_savenum_tv"
+                                        android:layout_marginLeft="2dp"
+                                        android:textSize="12dp"
+                                        android:textColor="@color/color_shop_detail_self_sub"
+                                        android:text="--"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginLeft="3dp"
+                                    android:layout_marginRight="3dp"
+                                    android:background="@color/gray_outshop_bag"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"/>
+
+                                <LinearLayout
+                                    android:background="@drawable/shop_sort_flashsale_back"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="horizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="invisible">
+                                    <View
+                                        android:layout_gravity="center"
+                                        android:layout_centerVertical="true"
+                                        android:background="@color/gray_outshop_bag"
+                                        android:layout_width="1dp"
+                                        android:layout_height="1dp"/>
+                                    <TextView
+                                        android:id="@+id/shop_sort_tv"
+                                        android:textSize="10dp"
+                                        android:textColor="@color/color_shop_detail_self_sub"
+                                        android:text="最高价:"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+                                    <TextView
+                                        android:id="@+id/shop_sort_flashsale_item_oldprice_tv"
+                                        android:layout_toRightOf="@id/shop_sort_tv"
+                                        android:layout_marginLeft="10dp"
+                                        android:textSize="10dp"
+                                        android:textColor="@color/color_shop_detail_self_sub"
+                                        android:text="---"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:textSize="13dp"
+                                        android:textColor="@color/color_shop_sort_text_price"
+                                        android:text="促销价:"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+                                    <TextView
+                                        android:id="@+id/shop_sort_flashsale_item_newprice_tv"
+                                        android:layout_marginLeft="12dp"
+                                        android:textSize="13dp"
+                                        android:textColor="@color/color_shop_detail_num"
+                                        android:text="--"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" />
+                                </LinearLayout>
+                            </LinearLayout>
+                            <RelativeLayout
+                                android:visibility="gone"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent">
+                                <Button
+                                    android:visibility="gone"
+                                    android:id="@+id/shop_sort_flashsale_item_add_bt"
+                                    android:layout_centerInParent="true"
+                                    android:textSize="13dp"
+                                    android:textColor="@color/white"
+                                    android:text="加入购物车"
+                                    android:background="@color/orange"
+                                    android:layout_width="75dp"
+                                    android:layout_height="24dp" />
+                            </RelativeLayout>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+           <!-- <View
+                android:background="@color/gray_fooddetails_bag"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>-->
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

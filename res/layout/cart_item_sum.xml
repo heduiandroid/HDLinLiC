@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_cart_item_shop_back">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+        android:gravity="center_vertical"
+        android:layout_marginRight="24dp"
+        android:layout_marginLeft="24dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="24dp">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <TextView
+                android:textSize="15dp"
+                android:textColor="@color/gray"
+                android:text="合计:"
+                android:src="@mipmap/ic_cart_item_shop"
+                android:background="@color/color_cart_item_shop_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+            <TextView
+                android:textColor="@color/color_cart_item_sum"
+                android:textSize="15dp"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/cart_item_sum_price_tv"
+                android:gravity="center"
+                android:text="￥ 20:00"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        </RelativeLayout>
+        <View
+            android:background="@color/gray_fooddetails_bag"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

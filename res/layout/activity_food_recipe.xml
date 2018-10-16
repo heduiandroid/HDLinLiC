@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.linli.consumer.widget.BackLayout
+        android:id="@+id/food_recipe_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/food_recipe_avatar_im"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:background="@color/cardview_light_background"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="36dp">
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:textSize="16dp"
+                    android:textColor="@color/black"
+                    android:id="@+id/food_recipe_name_tv"
+                    android:text="名称:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:background="@color/gray_fooddetails_bag"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="36dp">
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:textSize="16dp"
+                    android:textColor="@color/black"
+                    android:text="主料:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <TextView
+                style="@style/text_line_space"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:textSize="14dp"
+                android:textColor="@color/gray"
+                android:id="@+id/food_recipe_maining_tv"
+                android:text="---"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:background="@color/gray_fooddetails_bag"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="36dp">
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:textSize="16dp"
+                    android:textColor="@color/black"
+                    android:text="辅料:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <TextView
+                style="@style/text_line_space"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:textSize="14dp"
+                android:textColor="@color/gray"
+                android:id="@+id/food_recipe_accessories_tv"
+                android:text="---"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:background="@color/gray_fooddetails_bag"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="36dp">
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:textSize="16dp"
+                    android:textColor="@color/black"
+                    android:text="烹饪方法:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <TextView
+                style="@style/text_line_space"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:textSize="14dp"
+                android:textColor="@color/gray"
+                android:id="@+id/food_recipe_method_tv"
+                android:text="---"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:background="@color/gray_fooddetails_bag"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="36dp">
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:textSize="16dp"
+                    android:textColor="@color/black"
+                    android:text="小贴士:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <TextView
+                style="@style/text_line_space"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:textSize="14dp"
+                android:textColor="@color/gray"
+                android:id="@+id/food_recipe_tips_tv"
+                android:text="---"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

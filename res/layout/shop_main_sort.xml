@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:background="@mipmap/ic_shop_main_broadcast_cast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <com.linli.consumer.widget.MarqueeTextView
+            android:focusableInTouchMode="true"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:id="@+id/shop_main_sort_broadcast_tv"
+            android:textColor="@color/broadcast_purple"
+            android:layout_marginLeft="10dp"
+            android:text="祝大家新年快乐，猴年大吉~"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View
+        android:background="@color/light_gray"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+    <LinearLayout
+        android:id="@+id/ll_shopandfood"
+        android:background="@color/white"
+        android:layout_margin="9dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/shop_main_sort_findfood_ll"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/shop_main_sort_findfood_im"
+                android:layout_weight="1"
+                android:background="@mipmap/ic_food_main_sort_findfood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                style="@style/text_sort"
+                android:id="@+id/shop_main_sort_findfood_tv"
+                android:layout_marginTop="5dp"
+                android:text="找美食"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/shop_main_sort_market_ll"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/shop_main_sort_market_im"
+                android:layout_weight="1"
+                android:background="@mipmap/ic_food_main_sort_market"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                style="@style/text_sort"
+                android:id="@+id/shop_main_sort_market_tv"
+                android:layout_marginTop="5dp"
+                android:text="找美食"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/shop_main_sort_recipe_ll"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/shop_main_sort_recipe_im"
+                android:layout_weight="1"
+                android:background="@mipmap/ic_food_main_sort_recipe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                style="@style/text_sort"
+                android:id="@+id/shop_main_sort_recipe_tv"
+                android:layout_marginTop="5dp"
+                android:text="找美食"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/shop_main_sort_health_ll"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/shop_main_sort_health_im"
+                android:layout_weight="1"
+                android:background="@mipmap/ic_food_main_sort_health"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                style="@style/text_sort"
+                android:id="@+id/shop_main_sort_health_tv"
+                android:layout_marginTop="5dp"
+                android:text="找美食"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_margin="9dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/ll_service_beauty_leisure"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/iv_service_beauty_leisure"
+                    android:layout_weight="1"
+                    android:background="@mipmap/ic_food_main_sort_findfood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    style="@style/text_sort"
+                    android:id="@+id/tv_service_beauty_leisure"
+                    android:layout_marginTop="5dp"
+                    android:text="美容/休闲"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_service_yiliaojiankang"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/iv_service_yiliaojiankang"
+                    android:layout_weight="1"
+                    android:background="@mipmap/ic_food_main_sort_market"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    style="@style/text_sort"
+                    android:id="@+id/tv_service_yiliaojiankang"
+                    android:layout_marginTop="5dp"
+                    android:text="医疗/健康"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_service_home_maintenance"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/iv_service_home_maintenance"
+                    android:layout_weight="1"
+                    android:background="@mipmap/ic_food_main_sort_recipe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    style="@style/text_sort"
+                    android:id="@+id/tv_service_home_maintenance"
+                    android:layout_marginTop="5dp"
+                    android:text="医疗/健康"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_service_express_logistics"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/iv_service_express_logistics"
+                    android:layout_weight="1"
+                    android:background="@mipmap/ic_food_main_sort_health"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    style="@style/text_sort"
+                    android:id="@+id/tv_service_express_logistics"
+                    android:layout_marginTop="5dp"
+                    android:text="快递/物流"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_service_zhusulvyou"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/iv_service_zhusulvyou"
+                    android:layout_weight="1"
+                    android:background="@mipmap/ic_food_main_sort_health"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    style="@style/text_sort"
+                    android:id="@+id/tv_service_zhusulvyou"
+                    android:layout_marginTop="5dp"
+                    android:text="住宿/旅游"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_margin="9dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/ll_service_legal_insurance"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/iv_service_legal_insurance"
+                    android:layout_weight="1"
+                    android:background="@mipmap/ic_food_main_sort_findfood"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    style="@style/text_sort"
+                    android:id="@+id/tv_service_legal_insurance"
+                    android:layout_marginTop="5dp"
+                    android:text="法律/保险"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_service_realestate_decoration"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/iv_service_realestate_decoration"
+                    android:layout_weight="1"
+                    android:background="@mipmap/ic_food_main_sort_market"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    style="@style/text_sort"
+                    android:id="@+id/tv_service_realestate_decoration"
+                    android:layout_marginTop="5dp"
+                    android:text="地产/装修"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_service_wedding_photography"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/iv_service_wedding_photography"
+                    android:layout_weight="1"
+                    android:background="@mipmap/ic_food_main_sort_recipe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    style="@style/text_sort"
+                    android:id="@+id/tv_service_wedding_photography"
+                    android:layout_marginTop="5dp"
+                    android:text="婚庆/摄影"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_service_advertising_printing"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/iv_service_advertising_printing"
+                    android:layout_weight="1"
+                    android:background="@mipmap/ic_food_main_sort_health"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    style="@style/text_sort"
+                    android:id="@+id/tv_service_advertising_printing"
+                    android:layout_marginTop="5dp"
+                    android:text="广告/印刷"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_service_teach_training"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/iv_service_teach_training"
+                    android:layout_weight="1"
+                    android:background="@mipmap/ic_food_main_sort_health"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    style="@style/text_sort"
+                    android:id="@+id/tv_service_teach_training"
+                    android:layout_marginTop="5dp"
+                    android:text="全部"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

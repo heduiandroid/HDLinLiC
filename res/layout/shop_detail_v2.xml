@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:id="@+id/be_container">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/shop_detail_title_widget_appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/reader_web_toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:contentScrim="@color/white"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+                <LinearLayout
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <cn.bingoogolapple.bgabanner.BGABanner
+                        android:id="@+id/shop_detail_banner"
+                        style="@style/BannerDefaultStyle"
+                        app:banner_indicatorGravity="bottom|left"
+                        app:banner_transitionEffect="defaultEffect" />
+                </LinearLayout>
+
+
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/reader_web_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_collapseMode="pin"
+                    app:contentInsetLeft="0dp"
+                    app:contentInsetStart="0dp"
+                    app:popupTheme="@style/AppTheme.PopupOverlay" >
+                    <com.linli.consumer.widget.ShopDetailTitleLayout
+                        android:id="@+id/shop_detail_title_widget"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+
+                </android.support.v7.widget.Toolbar>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+            <android.support.design.widget.TabLayout
+                android:background="@color/white"
+                app:tabTextAppearance="@style/CustomTabLayoutTextAppearance"
+                app:tabMode="scrollable"
+                android:id="@+id/shop_detail_tablayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabIndicatorColor="@color/orange"
+                app:tabSelectedTextColor="@color/orange"
+                app:tabTextColor="@color/color_shop_sort_text_nor" />
+
+        </android.support.design.widget.AppBarLayout>
+
+        <com.linli.consumer.widget.MyViewPager
+            android:background="@color/color_vp_back"
+            android:id="@+id/shop_detail_vp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+        <com.linli.consumer.widget.ShopDetailBottomLayout
+            android:id="@+id/shop_detail_bottom_widget"
+            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"/>
+    </android.support.design.widget.CoordinatorLayout>
+
+
+</LinearLayout>

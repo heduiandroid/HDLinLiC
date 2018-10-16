@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context="com.linli.consumer.ui.main.HelpActivity">
+    <include
+        layout="@layout/normal_top_header" />
+    <WebView
+        android:id="@+id/wv_help"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </WebView>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.客服电话"
+                android:textSize="16sp"/>
+            <TextView
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="400-898-8830"
+                android:textSize="16sp"/>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2.订单问题"
+                android:textSize="16sp"/>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="5dp"
+                android:textColor="@color/gray"
+                android:text="        若订单为【待发货】，此时交易是不会自动确认收货打款给卖家的，请放心；"/>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="5dp"
+                android:textColor="@color/gray"
+                android:text="        ⑴您可点击【提醒发货】或直接联系卖家确认发货情况；"/>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3.售后问题"
+                android:textSize="16sp"/>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="5dp"
+                android:textColor="@color/gray"
+                android:text="        若您对卖家未按约定时间发货有异议，双方未沟通协商解决，可以申请退款，在退款成功交易关闭后的15天内发起违背承诺的投诉。"/>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.常见问题"
+                android:textSize="16sp"/>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="5dp"
+                android:textColor="@color/gray"
+                android:text="        请放心，除非您选择记录，否则在手机上登录是不会记录下您的密码的。而且默认手机用户的登录有效时间为5分钟，即用户登录后5分钟内没有进行任何操作，则需要重新登录。"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
