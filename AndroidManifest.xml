@@ -47,7 +47,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon,android:allowBackup,android:label">
-        <!-- 盒子sdk -->
+        <!-- （月光宝盒）盒子sdk -->
         <service
             android:name="com.easimote.sdk.service.BeaconService"
             android:exported="false" />
